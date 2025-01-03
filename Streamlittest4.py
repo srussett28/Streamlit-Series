@@ -1,11 +1,10 @@
 import streamlit as st
 st.title("SQL Command Guide")
-st.image("C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-Database.png", caption="SQL CMD", use_column_width=True)
 st.write("This guide covers essential SQL Commands with examples and business use cases")
 
 
 st.header("Why SQL is Relevant for Data Professionals")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\venn-diagram-wizeline.jpg", caption="Data Professions Venn Diagram", use_column_width=True)
+
 
 
 st.subheader("Data Analysts")
@@ -40,7 +39,7 @@ st.write(
 
 
 st.header("SQL Command Categories")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\SQLCMD.png", caption="SQL CMD Categories", use_column_width=True)
+
 
 st.subheader("1. Data Definition Language (DDL)")
 st.write(
@@ -68,7 +67,6 @@ st.write(
 
 
 st.header("Basic SQL Commands")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\basicCMD.png", caption="Basic SQL Commands", use_column_width=True)
 st.subheader("SELECT")
 st.write("""
 -** What It Does**: Retrieves Data from one or more tables in a database.
@@ -130,7 +128,6 @@ st.code("DELETE FROM orders WHERE order_date < '2023-01-01';", language="sql")
 
 
 st.header("Filtering Data Commands")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\filtering.jpg", caption="Filtering Commands", use_column_width=True)
 st.subheader("WHERE")
 st.write("""
 - **What It Does**: Filters records based on specific conditions. Used with `SELECT`, `UPDATE`, and `DELETE` to target rows.
@@ -239,7 +236,6 @@ st.code("SELECT * FROM customers WHERE EXISTS (SELECT * FROM orders WHERE custom
 
 
 st.header("Sorting & Limiting Data")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\sorting.jpg", caption="Basic SQL Commands", use_column_width=True)
 st.subheader("ORDER BY")
 st.write("""
 - **What It Does**: Sorts the result set by one or more columns in ascending (`ASC`) or descending (`DESC`) order.
@@ -284,8 +280,6 @@ st.code("SELECT DISTINCT country FROM customers;", language="sql")
 st.code("SELECT DISTINCT status FROM orders;", language="sql")
 
 st.header("Aggregating Data")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\aggrgate.png", caption="Basic SQL Commands", use_column_width=True)
-st.subheader("COUNT()")
 st.write("""
 - **What It Does**: Returns the number of rows matching a specified condition.
 - **Category**: DQL (Data Query Language)
@@ -393,10 +387,6 @@ st.code("SELECT region, SUM(sales) FROM orders GROUP BY region HAVING SUM(sales)
 st.code("SELECT category, COUNT(*) FROM products GROUP BY category HAVING COUNT(*) > 50;", language="sql")
 
 st.header("Joins")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\joins.png", caption="Basic Joins", use_column_width=True)
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\SQL-JOINS-Example-0.png", caption="Join Logic", use_column_width=True)
-
-
 st.subheader("INNER JOIN")
 st.write("""
 - **What It Does**: Returns rows when there is a match in both joined tables.
@@ -506,7 +496,6 @@ LEFT JOIN employees e2 ON e1.manager_id = e2.employee_id;
 
 
 st.header("Subqueries")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\subqueries.png", caption="Subquery Commands", use_column_width=True)
 st.subheader("Subquery in SELECT")
 st.write("""
 - **What It Does**: Allows using the result of another query as a derived value within the `SELECT` statement.
@@ -570,8 +559,6 @@ GROUP BY region;
 """, language="sql")
 
 st.header("Set Operations")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\operations.jpg", caption="Set Operations", use_column_width=True)
-st.subheader("UNION")
 st.write("""
 - **What It Does**: Combines the results of two or more `SELECT` queries into a single result set, removing duplicates.
 **Category**: DQL (Data Query Language)
@@ -648,7 +635,6 @@ FROM in_store_orders;
 
 
 st.header("Data Modification")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\modification.png", caption="Data Modification", use_column_width=True)
 st.subheader("INSERT")
 st.write("""
 - **What It Does**: Adds new rows to a table.
@@ -700,7 +686,6 @@ WHERE status = 'Canceled';
 
 
 st.header("Indexing")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\index.png", caption="Index Commands", use_column_width=True)
 st.subheader("CREATE INDEX")
 st.write("""
 - **What It Does**: Creates an index on a table to speed up data retrieval operations.
@@ -775,7 +760,6 @@ ON customers (city, age);
 
 
 st.header("Transactions")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\transaction.png", caption="Transaction Commands", use_column_width=True)
 st.subheader("BEGIN TRANSACTION")
 st.write("""
 - **What It Does**: Starts a new transaction to group multiple SQL operations as a single unit of work.
@@ -868,7 +852,6 @@ COMMIT;
 """, language="sql")
 
 st.header("Views")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\views.jpg", caption="Views Commands", use_column_width=True)
 st.subheader("CREATE VIEW")
 st.write("""
 - **What It Does**: Creates a virtual table (view) based on the result set of an SQL query. Views can simplify complex queries by encapsulating them in reusable objects.
@@ -953,7 +936,6 @@ WHERE customer_id = 101;
 """, language="sql")
 
 st.header("Triggers")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\trigger.png", caption="Trigger Commands", use_column_width=True)
 st.subheader("CREATE TRIGGER")
 st.write("""
 - **What It Does**: Creates a trigger, a stored procedure that automatically executes in response to specific events (INSERT, UPDATE, DELETE) on a table or view.
@@ -1032,8 +1014,7 @@ BEGIN
 END;
 """, language="sql")
 
-st.header ("Common Table Expressions "CTE"")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\CTE.png", caption="CTE Commands", use_column_width=True)
+st.header("Common Table Expressions")
 st.subheader("WITH CTE AS")
 st.write("""
 - **What It Does**: Creates a Common Table Expression (CTE), a temporary result set that can be referenced within a SQL query.
@@ -1105,7 +1086,6 @@ WHERE total_sold > 100;
 
 
 st.header("Window Functions")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\windowfunctions.png", caption="Window Functions", use_column_width=True)
 st.subheader("ROW_NUMBER()")
 st.write("""
 - **What It Does**: Assigns a unique sequential integer to rows within a partition, starting at 1.
@@ -1311,7 +1291,6 @@ FROM employees;
 
 
 st.header("Date & Time Functions")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\calendar.png", caption="Date & Time Commands", use_column_width=True)
 st.subheader("GETDATE()")
 st.write("""
 - **What It Does**: Returns the current date and time of the system.
@@ -1448,7 +1427,6 @@ SELECT TIMESTAMPDIFF(MONTH, '2024-01-01', '2024-12-27') AS MonthDifference;
 
 
 st.header("Conditional Logic")
-st.image("C:\Users\Sloan\Documents\Github\SQL_Stuff\logic.png", caption="Basic SQL Commands", use_column_width=True)
 st.subheader("CASE WHEN")
 st.write("""
 - **What It Does**: Allows conditional logic within SQL queries. It evaluates conditions and returns specific values based on those conditions.

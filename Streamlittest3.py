@@ -1,6 +1,7 @@
 import streamlit as st
 st.title("SQL Command Guide")
-st.image("C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-Database.png", caption="SQL CMD", use_column_width=True)
+img_path = r"C:\Users\Sloan\Documents\Github\SQL_Stuff\venn-diagram-wizeline.jpg"
+st.image(img_path, caption="Data Professions Venn Diagram", use_column_width=True)
 st.write("This guide covers essential SQL Commands with examples and business use cases")
 
 

@@ -1,0 +1,75 @@
+# Ignore all .log files
+*.log
+
+# Ignore .env files
+.env
+
+# Ignore node_modules for Node.js projects
+node_modules/
+
+# Ignore Python virtual environment
+venv/
+
+# Ignore .DS_Store (macOS system files)
+.DS_Store
+
+# Ignore Thumbs.db (Windows system files)
+Thumbs.db
+
+# Ignore temporary files
+temp/
+
+# Ignore IDE-specific directories
+.vscode/
+.idea/
+
+# Ignore build and output directories
+dist/
+build/
+target/
+
+# Ignore build and output directories
+dist/
+build/
+target/
+
+# Ignore sensitive files like API keys or credentials
+*.key
+*.pem
+secret_config.json
+
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore node_modules (for Node.js)
+node_modules/
+
+# Ignore Python virtual environment
+venv/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore temporary files
+temp/
+
+# Ignore IDE-specific directories
+.vscode/
+.idea/
+
+# Ignore build and output directories
+dist/
+build/
+target/
+
+# Ignore sensitive keys and credentials
+*.key
+*.pem
+secret_config.json
+

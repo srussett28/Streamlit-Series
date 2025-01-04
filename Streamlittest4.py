@@ -1,10 +1,27 @@
 import streamlit as st
+import os
+
+
+image_path = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-DATABASE.png"  # Use your actual path
+
+
+st.image(image_path, use_container_width=True)
 st.title("SQL Command Guide")
 st.write("This guide covers essential SQL Commands with examples and business use cases")
 
 
-st.header("Why SQL is Relevant for Data Professionals")
 
+
+st.header("Why SQL is Relevant for Data Professionals")
+st.write("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
+
+
+image_path_turtles = "C:/Users/Sloan/Documents/Github/SQL_Stuff/turtles.png"  
+
+
+st.image(image_path, use_container_width=True)
+st.title("SQL Command Guide")
+st.write("This guide covers essential SQL Commands with examples and business use cases")
 
 
 st.subheader("Data Analysts")
@@ -39,7 +56,8 @@ st.write(
 
 
 st.header("SQL Command Categories")
-
+image_path_categories = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQLCAT.png"
+st.image(image_path_categories, use_container_width=True)
 
 st.subheader("1. Data Definition Language (DDL)")
 st.write(
@@ -65,14 +83,19 @@ st.write(
     "TCL commands are used to manage transactions in a database. These commands help ensure data integrity and consistency. " 
 )
 
+st.subheader("5. Transaction Control Language (DQL)")
+st.write(
+    "DQL commands are focused on querying data from the database. These commands are used to retrieve, filter, and sort data."
 
 st.header("Basic SQL Commands")
+image_path_Basic = "C:/Users/Sloan/Documents/Github/SQL_Stuff/BasicSQL.png"
+st.image(image_path_Basic, use_container_width=True)
 st.subheader("SELECT")
 st.write("""
 -** What It Does**: Retrieves Data from one or more tables in a database.
 -** Selecting Specific Columns**: Select * retrieves all columns from the table(s), while selecting for specific columns follows this path
 SELECT column 1, column 2, column 3 etc. 
-- **Category**: Data Manipulation Language (DML)
+- **Category**: Data Query Language (DQL)
 - **Roles Most Likely to Use**: 
    - **Data Analyst**: Extracts data for analysis and reporting.
    - **Data Scientist**: Retrieves data for cleaning and modeling.
@@ -126,8 +149,9 @@ st.write("""
 """)
 st.code("DELETE FROM orders WHERE order_date < '2023-01-01';", language="sql")
 
-
 st.header("Filtering Data Commands")
+image_path_filter = "C:/Users/Sloan/Documents/Github/SQL_Stuff/filtering.jpg"
+st.image(image_path_filte, use_container_width=True)
 st.subheader("WHERE")
 st.write("""
 - **What It Does**: Filters records based on specific conditions. Used with `SELECT`, `UPDATE`, and `DELETE` to target rows.
@@ -234,8 +258,9 @@ st.write("""
 """)
 st.code("SELECT * FROM customers WHERE EXISTS (SELECT * FROM orders WHERE customers.id = orders.customer_id);", language="sql")
 
-
 st.header("Sorting & Limiting Data")
+image_path_sorting = "C:/Users/Sloan/Documents/Github/SQL_Stuff/sorting.jpg"
+st.image(image_path_sorting, use_container_width=True)
 st.subheader("ORDER BY")
 st.write("""
 - **What It Does**: Sorts the result set by one or more columns in ascending (`ASC`) or descending (`DESC`) order.
@@ -280,6 +305,8 @@ st.code("SELECT DISTINCT country FROM customers;", language="sql")
 st.code("SELECT DISTINCT status FROM orders;", language="sql")
 
 st.header("Aggregating Data")
+image_path_aggregate = "C:/Users/Sloan/Documents/Github/SQL_Stuff/aggrgate.png"
+st.image(image_path_aggregate, use_container_width=True)
 st.write("""
 - **What It Does**: Returns the number of rows matching a specified condition.
 - **Category**: DQL (Data Query Language)
@@ -386,7 +413,16 @@ st.write("""
 st.code("SELECT region, SUM(sales) FROM orders GROUP BY region HAVING SUM(sales) > 10000;", language="sql")
 st.code("SELECT category, COUNT(*) FROM products GROUP BY category HAVING COUNT(*) > 50;", language="sql")
 
+
 st.header("Joins")
+st.subheader("Classic Join Venn Diagram")
+image_path_joins_classic = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-JOINS-Example-0.png"
+st.image(image_path_joins_classic, use_container_width=True)
+
+st.subheader("Helen Wall's amazing join zipper concept 10/10")
+image_path_zipper = "C:/Users/Sloan/Documents/Github/SQL_Stuff/ZipperJoin.png"
+st.image(image_path_zipper, use_container_width=True)
+
 st.subheader("INNER JOIN")
 st.write("""
 - **What It Does**: Returns rows when there is a match in both joined tables.
@@ -496,6 +532,8 @@ LEFT JOIN employees e2 ON e1.manager_id = e2.employee_id;
 
 
 st.header("Subqueries")
+image_path_subqueries = "C:/Users/Sloan/Documents/Github/SQL_Stuff/subqueries.png"
+st.image(image_path_subqueries, use_container_width=True)
 st.subheader("Subquery in SELECT")
 st.write("""
 - **What It Does**: Allows using the result of another query as a derived value within the `SELECT` statement.
@@ -635,6 +673,8 @@ FROM in_store_orders;
 
 
 st.header("Data Modification")
+image_path_modification = "C:/Users/Sloan/Documents/Github/SQL_Stuff/modification.png"
+st.image(image_path_modification, use_container_width=True)
 st.subheader("INSERT")
 st.write("""
 - **What It Does**: Adds new rows to a table.
@@ -686,6 +726,8 @@ WHERE status = 'Canceled';
 
 
 st.header("Indexing")
+image_path_index = "C:/Users/Sloan/Documents/Github/SQL_Stuff/index.png"
+st.image(image_path_index, use_container_width=True)
 st.subheader("CREATE INDEX")
 st.write("""
 - **What It Does**: Creates an index on a table to speed up data retrieval operations.
@@ -760,6 +802,8 @@ ON customers (city, age);
 
 
 st.header("Transactions")
+image_path_transaction = "C:/Users/Sloan/Documents/Github/SQL_Stuff/transaction.png"
+st.image(image_path_transaction, use_container_width=True)
 st.subheader("BEGIN TRANSACTION")
 st.write("""
 - **What It Does**: Starts a new transaction to group multiple SQL operations as a single unit of work.
@@ -852,6 +896,8 @@ COMMIT;
 """, language="sql")
 
 st.header("Views")
+image_path_views = "C:/Users/Sloan/Documents/Github/SQL_Stuff/views.jpg"
+st.image(image_path_views, use_container_width=True)
 st.subheader("CREATE VIEW")
 st.write("""
 - **What It Does**: Creates a virtual table (view) based on the result set of an SQL query. Views can simplify complex queries by encapsulating them in reusable objects.
@@ -936,6 +982,8 @@ WHERE customer_id = 101;
 """, language="sql")
 
 st.header("Triggers")
+image_path_trigger = "C:/Users/Sloan/Documents/Github/SQL_Stuff/trigger.png"
+st.image(image_path_trigger, use_container_width=True)
 st.subheader("CREATE TRIGGER")
 st.write("""
 - **What It Does**: Creates a trigger, a stored procedure that automatically executes in response to specific events (INSERT, UPDATE, DELETE) on a table or view.

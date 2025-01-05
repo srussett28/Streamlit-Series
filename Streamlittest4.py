@@ -2,7 +2,7 @@ import streamlit as st
 import os
 
 
-image_path = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-DATABASE.png"  # Use your actual path
+image_path = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-DATABASE.png"
 
 
 st.image(image_path, use_container_width=True)
@@ -16,10 +16,10 @@ st.header("Why SQL is Relevant for Data Professionals")
 st.write("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
 
 
-image_path_turtles = "C:/Users/Sloan/Documents/Github/SQL_Stuff/turtles.png"  
+image_path_turtles = "C:/Users/Sloan/Documents/Github/SQL_Stuff/turtles3.png"  
 
 
-st.image(image_path, use_container_width=True)
+st.image(image_path_turtles, use_container_width=True)
 st.title("SQL Command Guide")
 st.write("This guide covers essential SQL Commands with examples and business use cases")
 
@@ -86,6 +86,7 @@ st.write(
 st.subheader("5. Transaction Control Language (DQL)")
 st.write(
     "DQL commands are focused on querying data from the database. These commands are used to retrieve, filter, and sort data."
+)
 
 st.header("Basic SQL Commands")
 image_path_Basic = "C:/Users/Sloan/Documents/Github/SQL_Stuff/BasicSQL.png"
@@ -151,7 +152,7 @@ st.code("DELETE FROM orders WHERE order_date < '2023-01-01';", language="sql")
 
 st.header("Filtering Data Commands")
 image_path_filter = "C:/Users/Sloan/Documents/Github/SQL_Stuff/filtering.jpg"
-st.image(image_path_filte, use_container_width=True)
+st.image(image_path_filter, use_container_width=True)
 st.subheader("WHERE")
 st.write("""
 - **What It Does**: Filters records based on specific conditions. Used with `SELECT`, `UPDATE`, and `DELETE` to target rows.
@@ -596,7 +597,10 @@ FROM (
 GROUP BY region;
 """, language="sql")
 
+
 st.header("Set Operations")
+image_path_ops = "C:/Users/Sloan/Documents/Github/SQL_Stuff/operations.jpg"
+st.image(image_path_ops, use_container_width=True)
 st.write("""
 - **What It Does**: Combines the results of two or more `SELECT` queries into a single result set, removing duplicates.
 **Category**: DQL (Data Query Language)
@@ -1063,6 +1067,8 @@ END;
 """, language="sql")
 
 st.header("Common Table Expressions")
+image_path_CTE = "C:/Users/Sloan/Documents/Github/SQL_Stuff/CTE.png"
+st.image(image_path_CTE, use_container_width=True)
 st.subheader("WITH CTE AS")
 st.write("""
 - **What It Does**: Creates a Common Table Expression (CTE), a temporary result set that can be referenced within a SQL query.
@@ -1134,6 +1140,8 @@ WHERE total_sold > 100;
 
 
 st.header("Window Functions")
+image_path_windows = "C:/Users/Sloan/Documents/Github/SQL_Stuff/windowfunctions.png"
+st.image(image_path_windows, use_container_width=True)
 st.subheader("ROW_NUMBER()")
 st.write("""
 - **What It Does**: Assigns a unique sequential integer to rows within a partition, starting at 1.
@@ -1339,6 +1347,8 @@ FROM employees;
 
 
 st.header("Date & Time Functions")
+image_path_date = "C:/Users/Sloan/Documents/Github/SQL_Stuff/calendar.png"
+st.image(image_path_date, use_container_width=True)
 st.subheader("GETDATE()")
 st.write("""
 - **What It Does**: Returns the current date and time of the system.
@@ -1475,6 +1485,8 @@ SELECT TIMESTAMPDIFF(MONTH, '2024-01-01', '2024-12-27') AS MonthDifference;
 
 
 st.header("Conditional Logic")
+image_path_logic = "C:/Users/Sloan/Documents/Github/SQL_Stuff/logic.png"
+st.image(image_path_logic, use_container_width=True)
 st.subheader("CASE WHEN")
 st.write("""
 - **What It Does**: Allows conditional logic within SQL queries. It evaluates conditions and returns specific values based on those conditions.

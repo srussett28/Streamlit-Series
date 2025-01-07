@@ -2,7 +2,8 @@ import streamlit as st
 import os
 
 
-image_path = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-DATABASE.png"
+image_path = "./SQL-Database.png"
+
 
 
 st.image(image_path, use_container_width=True)
@@ -16,7 +17,7 @@ st.header("Why SQL is Relevant for Data Professionals")
 st.write("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
 
 
-image_path_turtles = "C:/Users/Sloan/Documents/Github/SQL_Stuff/turtles3.png"  
+image_path_turtles = "./turtles3.png" 
 
 
 st.image(image_path_turtles, use_container_width=True)
@@ -56,7 +57,7 @@ st.write(
 
 
 st.header("SQL Command Categories")
-image_path_categories = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQLCAT.png"
+image_path_categories = "/app/SQLCAT.png"
 st.image(image_path_categories, use_container_width=True)
 
 st.subheader("1. Data Definition Language (DDL)")
@@ -89,7 +90,7 @@ st.write(
 )
 
 st.header("Basic SQL Commands")
-image_path_Basic = "C:/Users/Sloan/Documents/Github/SQL_Stuff/BasicSQL.png"
+image_path_Basic = "/app/BasicSQL.png" 
 st.image(image_path_Basic, use_container_width=True)
 st.subheader("SELECT")
 st.write("""
@@ -150,8 +151,9 @@ st.write("""
 """)
 st.code("DELETE FROM orders WHERE order_date < '2023-01-01';", language="sql")
 
+
 st.header("Filtering Data Commands")
-image_path_filter = "C:/Users/Sloan/Documents/Github/SQL_Stuff/filtering.jpg"
+image_path_filter = "/app/filtering.jpg"
 st.image(image_path_filter, use_container_width=True)
 st.subheader("WHERE")
 st.write("""
@@ -260,7 +262,7 @@ st.write("""
 st.code("SELECT * FROM customers WHERE EXISTS (SELECT * FROM orders WHERE customers.id = orders.customer_id);", language="sql")
 
 st.header("Sorting & Limiting Data")
-image_path_sorting = "C:/Users/Sloan/Documents/Github/SQL_Stuff/sorting.jpg"
+image_path_sorting = "/app/sorting.jpg"
 st.image(image_path_sorting, use_container_width=True)
 st.subheader("ORDER BY")
 st.write("""
@@ -305,8 +307,9 @@ st.write("""
 st.code("SELECT DISTINCT country FROM customers;", language="sql")
 st.code("SELECT DISTINCT status FROM orders;", language="sql")
 
+
 st.header("Aggregating Data")
-image_path_aggregate = "C:/Users/Sloan/Documents/Github/SQL_Stuff/aggrgate.png"
+image_path_aggregate = "/app/aggrgate.png"
 st.image(image_path_aggregate, use_container_width=True)
 st.write("""
 - **What It Does**: Returns the number of rows matching a specified condition.
@@ -417,11 +420,11 @@ st.code("SELECT category, COUNT(*) FROM products GROUP BY category HAVING COUNT(
 
 st.header("Joins")
 st.subheader("Classic Join Venn Diagram")
-image_path_joins_classic = "C:/Users/Sloan/Documents/Github/SQL_Stuff/SQL-JOINS-Example-0.png"
+image_path_joins_classic = "/app/SQL-JOINS-Example-0.png" 
 st.image(image_path_joins_classic, use_container_width=True)
 
 st.subheader("Helen Wall's amazing join zipper concept 10/10")
-image_path_zipper = "C:/Users/Sloan/Documents/Github/SQL_Stuff/ZipperJoin.png"
+image_path_zipper = "/app/ZipperJoin.png"
 st.image(image_path_zipper, use_container_width=True)
 
 st.subheader("INNER JOIN")
@@ -533,7 +536,7 @@ LEFT JOIN employees e2 ON e1.manager_id = e2.employee_id;
 
 
 st.header("Subqueries")
-image_path_subqueries = "C:/Users/Sloan/Documents/Github/SQL_Stuff/subqueries.png"
+image_path_subqueries = "/app/subqueries.png"
 st.image(image_path_subqueries, use_container_width=True)
 st.subheader("Subquery in SELECT")
 st.write("""
@@ -599,7 +602,7 @@ GROUP BY region;
 
 
 st.header("Set Operations")
-image_path_ops = "C:/Users/Sloan/Documents/Github/SQL_Stuff/operations.jpg"
+image_path_ops = "/app/operations.jpg"
 st.image(image_path_ops, use_container_width=True)
 st.write("""
 - **What It Does**: Combines the results of two or more `SELECT` queries into a single result set, removing duplicates.
@@ -677,7 +680,7 @@ FROM in_store_orders;
 
 
 st.header("Data Modification")
-image_path_modification = "C:/Users/Sloan/Documents/Github/SQL_Stuff/modification.png"
+image_path_modification = "/app/modification.png"
 st.image(image_path_modification, use_container_width=True)
 st.subheader("INSERT")
 st.write("""
@@ -730,7 +733,7 @@ WHERE status = 'Canceled';
 
 
 st.header("Indexing")
-image_path_index = "C:/Users/Sloan/Documents/Github/SQL_Stuff/index.png"
+image_path_index = "/app/index.png"
 st.image(image_path_index, use_container_width=True)
 st.subheader("CREATE INDEX")
 st.write("""
@@ -806,7 +809,7 @@ ON customers (city, age);
 
 
 st.header("Transactions")
-image_path_transaction = "C:/Users/Sloan/Documents/Github/SQL_Stuff/transaction.png"
+image_path_transaction = "/app/transaction.png"
 st.image(image_path_transaction, use_container_width=True)
 st.subheader("BEGIN TRANSACTION")
 st.write("""
@@ -899,8 +902,9 @@ BEGIN TRANSACTION;
 COMMIT;
 """, language="sql")
 
+
 st.header("Views")
-image_path_views = "C:/Users/Sloan/Documents/Github/SQL_Stuff/views.jpg"
+image_path_views = "/app/views.jpg" 
 st.image(image_path_views, use_container_width=True)
 st.subheader("CREATE VIEW")
 st.write("""
@@ -985,8 +989,9 @@ SET email = 'newemail@example.com'
 WHERE customer_id = 101;
 """, language="sql")
 
+
 st.header("Triggers")
-image_path_trigger = "C:/Users/Sloan/Documents/Github/SQL_Stuff/trigger.png"
+image_path_trigger = "/app/trigger.png"
 st.image(image_path_trigger, use_container_width=True)
 st.subheader("CREATE TRIGGER")
 st.write("""
@@ -1067,7 +1072,7 @@ END;
 """, language="sql")
 
 st.header("Common Table Expressions")
-image_path_CTE = "C:/Users/Sloan/Documents/Github/SQL_Stuff/CTE.png"
+image_path_CTE = "/app/CTE.png"
 st.image(image_path_CTE, use_container_width=True)
 st.subheader("WITH CTE AS")
 st.write("""
@@ -1140,7 +1145,7 @@ WHERE total_sold > 100;
 
 
 st.header("Window Functions")
-image_path_windows = "C:/Users/Sloan/Documents/Github/SQL_Stuff/windowfunctions.png"
+image_path_windows = "/app/windowfunctions.png"
 st.image(image_path_windows, use_container_width=True)
 st.subheader("ROW_NUMBER()")
 st.write("""
@@ -1347,7 +1352,7 @@ FROM employees;
 
 
 st.header("Date & Time Functions")
-image_path_date = "C:/Users/Sloan/Documents/Github/SQL_Stuff/calendar.png"
+image_path_date = "/app/calendar.png"
 st.image(image_path_date, use_container_width=True)
 st.subheader("GETDATE()")
 st.write("""
@@ -1485,7 +1490,7 @@ SELECT TIMESTAMPDIFF(MONTH, '2024-01-01', '2024-12-27') AS MonthDifference;
 
 
 st.header("Conditional Logic")
-image_path_logic = "C:/Users/Sloan/Documents/Github/SQL_Stuff/logic.png"
+image_path_logic = "/app/logic.png"  
 st.image(image_path_logic, use_container_width=True)
 st.subheader("CASE WHEN")
 st.write("""

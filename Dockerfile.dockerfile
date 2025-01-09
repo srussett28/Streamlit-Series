@@ -1,34 +1,44 @@
+# Use an official Python slim image
 FROM python:3.11-slim
 
+# Set the working directory in the container
 WORKDIR /app
 
+# Copy application files into the container
 COPY Streamlittest4.py .
+COPY sandbox.db .  
+
+# Copy images
+COPY SQL-Database.png .
+COPY turtles3.png .
+COPY SQLCAT.png .
+COPY BasicSQL.png .
+COPY filtering.jpg .
+COPY sorting.jpg .
+COPY aggrgate.png .
+COPY SQL-JOINS-Example-0.png .
+COPY ZipperJoin.png .
+COPY subqueries.png .
+COPY operations.jpg .
+COPY modification.png .
+COPY index.png .
+COPY transaction.png .
+COPY views.jpg .
+COPY trigger.png .
+COPY CTE.png .
+COPY windowfunctions.png .
+COPY calendar.png .
+COPY logic.png .
+
+# Copy requirements and install dependencies
 COPY requirements.txt .
-COPY SQL-Database.png /app/SQL-Database.png
-COPY turtles3.png /app/turtles3.png
-COPY SQLCAT.png /app/SQLCAT.png
-COPY BasicSQL.png /app/BasicSQL.png
-COPY filtering.jpg /app/filtering.jpg
-COPY sorting.jpg /app/sorting.jpg
-COPY aggrgate.png /app/aggrgate.png
-COPY SQL-JOINS-Example-0.png /app/SQL-JOINS-Example-0.png
-COPY ZipperJoin.png /app/ZipperJoin.png
-COPY subqueries.png /app/subqueries.png
-COPY operations.jpg /app/operations.jpg
-COPY modification.png /app/modification.png
-COPY index.png /app/index.png
-COPY transaction.png /app/transaction.png
-COPY views.jpg /app/views.jpg
-COPY trigger.png /app/trigger.png
-COPY CTE.png /app/CTE.png
-COPY windowfunctions.png /app/windowfunctions.png
-COPY calendar.png /app/calendar.png
-COPY logic.png /app/logic.png
-
-
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Expose Streamlit's default port
 EXPOSE 8501
 
-CMD ["streamlit", "run", "Streamlittest4.py"]
+# Start the Streamlit app
+CMD ["streamlit", "run", "Streamlittest4.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+
 

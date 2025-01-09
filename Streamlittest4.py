@@ -1,8 +1,15 @@
 import streamlit as st
 import os
+import sqlite3
+import pandas as pd
+
+def execute_query(query):
+    with sqlite3.connect("sandbox.db") as conn:
+        return pd.read_sql_query(query, conn)
 
 
-image_path = "./SQL-Database.png"
+
+image_path = "SQL-Database.png"
 
 
 
@@ -17,7 +24,7 @@ st.header("Why SQL is Relevant for Data Professionals")
 st.write("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
 
 
-image_path_turtles = "./turtles3.png" 
+image_path_turtles = "turtles3.png" 
 
 
 st.image(image_path_turtles, use_container_width=True)
@@ -57,7 +64,7 @@ st.write(
 
 
 st.header("SQL Command Categories")
-image_path_categories = "/app/SQLCAT.png"
+image_path_categories = "SQLCAT.png"
 st.image(image_path_categories, use_container_width=True)
 
 st.subheader("1. Data Definition Language (DDL)")
@@ -90,7 +97,7 @@ st.write(
 )
 
 st.header("Basic SQL Commands")
-image_path_Basic = "/app/BasicSQL.png" 
+image_path_Basic = "BasicSQL.png" 
 st.image(image_path_Basic, use_container_width=True)
 st.subheader("SELECT")
 st.write("""
@@ -153,7 +160,7 @@ st.code("DELETE FROM orders WHERE order_date < '2023-01-01';", language="sql")
 
 
 st.header("Filtering Data Commands")
-image_path_filter = "/app/filtering.jpg"
+image_path_filter = "filtering.jpg"
 st.image(image_path_filter, use_container_width=True)
 st.subheader("WHERE")
 st.write("""
@@ -262,7 +269,7 @@ st.write("""
 st.code("SELECT * FROM customers WHERE EXISTS (SELECT * FROM orders WHERE customers.id = orders.customer_id);", language="sql")
 
 st.header("Sorting & Limiting Data")
-image_path_sorting = "/app/sorting.jpg"
+image_path_sorting = "sorting.jpg"
 st.image(image_path_sorting, use_container_width=True)
 st.subheader("ORDER BY")
 st.write("""
@@ -309,7 +316,7 @@ st.code("SELECT DISTINCT status FROM orders;", language="sql")
 
 
 st.header("Aggregating Data")
-image_path_aggregate = "/app/aggrgate.png"
+image_path_aggregate = "aggrgate.png"
 st.image(image_path_aggregate, use_container_width=True)
 st.write("""
 - **What It Does**: Returns the number of rows matching a specified condition.
@@ -420,11 +427,11 @@ st.code("SELECT category, COUNT(*) FROM products GROUP BY category HAVING COUNT(
 
 st.header("Joins")
 st.subheader("Classic Join Venn Diagram")
-image_path_joins_classic = "/app/SQL-JOINS-Example-0.png" 
+image_path_joins_classic = "SQL-JOINS-Example-0.png" 
 st.image(image_path_joins_classic, use_container_width=True)
 
 st.subheader("Helen Wall's amazing join zipper concept 10/10")
-image_path_zipper = "/app/ZipperJoin.png"
+image_path_zipper = "ZipperJoin.png"
 st.image(image_path_zipper, use_container_width=True)
 
 st.subheader("INNER JOIN")
@@ -536,7 +543,7 @@ LEFT JOIN employees e2 ON e1.manager_id = e2.employee_id;
 
 
 st.header("Subqueries")
-image_path_subqueries = "/app/subqueries.png"
+image_path_subqueries = "subqueries.png"
 st.image(image_path_subqueries, use_container_width=True)
 st.subheader("Subquery in SELECT")
 st.write("""
@@ -602,7 +609,7 @@ GROUP BY region;
 
 
 st.header("Set Operations")
-image_path_ops = "/app/operations.jpg"
+image_path_ops = "operations.jpg"
 st.image(image_path_ops, use_container_width=True)
 st.write("""
 - **What It Does**: Combines the results of two or more `SELECT` queries into a single result set, removing duplicates.
@@ -680,7 +687,7 @@ FROM in_store_orders;
 
 
 st.header("Data Modification")
-image_path_modification = "/app/modification.png"
+image_path_modification = "modification.png"
 st.image(image_path_modification, use_container_width=True)
 st.subheader("INSERT")
 st.write("""
@@ -733,7 +740,7 @@ WHERE status = 'Canceled';
 
 
 st.header("Indexing")
-image_path_index = "/app/index.png"
+image_path_index = "index.png"
 st.image(image_path_index, use_container_width=True)
 st.subheader("CREATE INDEX")
 st.write("""
@@ -809,7 +816,7 @@ ON customers (city, age);
 
 
 st.header("Transactions")
-image_path_transaction = "/app/transaction.png"
+image_path_transaction = "transaction.png"
 st.image(image_path_transaction, use_container_width=True)
 st.subheader("BEGIN TRANSACTION")
 st.write("""
@@ -904,7 +911,7 @@ COMMIT;
 
 
 st.header("Views")
-image_path_views = "/app/views.jpg" 
+image_path_views = "views.jpg" 
 st.image(image_path_views, use_container_width=True)
 st.subheader("CREATE VIEW")
 st.write("""
@@ -991,7 +998,7 @@ WHERE customer_id = 101;
 
 
 st.header("Triggers")
-image_path_trigger = "/app/trigger.png"
+image_path_trigger = "trigger.png"
 st.image(image_path_trigger, use_container_width=True)
 st.subheader("CREATE TRIGGER")
 st.write("""
@@ -1072,7 +1079,7 @@ END;
 """, language="sql")
 
 st.header("Common Table Expressions")
-image_path_CTE = "/app/CTE.png"
+image_path_CTE = "CTE.png"
 st.image(image_path_CTE, use_container_width=True)
 st.subheader("WITH CTE AS")
 st.write("""
@@ -1145,7 +1152,7 @@ WHERE total_sold > 100;
 
 
 st.header("Window Functions")
-image_path_windows = "/app/windowfunctions.png"
+image_path_windows = "windowfunctions.png"
 st.image(image_path_windows, use_container_width=True)
 st.subheader("ROW_NUMBER()")
 st.write("""
@@ -1352,7 +1359,7 @@ FROM employees;
 
 
 st.header("Date & Time Functions")
-image_path_date = "/app/calendar.png"
+image_path_date = "calendar.png"
 st.image(image_path_date, use_container_width=True)
 st.subheader("GETDATE()")
 st.write("""
@@ -1490,7 +1497,7 @@ SELECT TIMESTAMPDIFF(MONTH, '2024-01-01', '2024-12-27') AS MonthDifference;
 
 
 st.header("Conditional Logic")
-image_path_logic = "/app/logic.png"  
+image_path_logic = "logic.png"  
 st.image(image_path_logic, use_container_width=True)
 st.subheader("CASE WHEN")
 st.write("""
@@ -1549,3 +1556,108 @@ SELECT
   COALESCE(phone_work, phone_mobile, 'No Phone Available') AS ContactNumber
 FROM employees;
 """, language="sql")
+
+
+
+@st.cache_resource
+def get_connection():
+    
+    conn = sqlite3.connect("sandbox.db", check_same_thread=False)
+    return conn
+
+
+st.title("SQL Sandbox with Streamlit")
+st.header("SQL Database Context")
+st.markdown("""
+This SQL sandbox includes a database designed for learning and testing SQL queries. 
+It contains four main tables that represent a business use case involving employees, departments, projects, and assignments. 
+Below is a description of each table and its structure.
+""")
+
+st.subheader("Available Tables")
+
+st.markdown("""
+### `employees`
+- **id**: Unique identifier for the employee.
+- **name**: Name of the employee.
+- **department_id**: Foreign key referencing the `departments` table.
+- **salary**: Salary of the employee.
+
+### `departments`
+- **id**: Unique identifier for the department.
+- **name**: Name of the department.
+- **location**: Location of the department.
+
+### `projects`
+- **id**: Unique identifier for the project.
+- **name**: Name of the project.
+- **department_id**: Foreign key referencing the `departments` table.
+
+### `assignments`
+- **id**: Unique identifier for the assignment.
+- **employee_id**: Foreign key referencing the `employees` table.
+- **project_id**: Foreign key referencing the `projects` table.
+- **hours_worked**: Number of hours worked on the project.
+""")
+
+conn = get_connection()
+
+# User input for SQL query
+query = st.text_area("Enter your SQL query here:")
+
+
+if st.button("Run Query"):
+    try:
+        # Run the query and display results
+        df = execute_query(query)
+        st.dataframe(df)
+    except Exception as e:
+        st.error(f"Error: {e}")
+
+
+if st.button("Reset Database"):
+    # Reload the original database (if needed)
+    st.warning("Database reset functionality is not implemented yet!")
+    
+
+
+st.header("Important Note on Joins in SQLite")
+st.markdown("""
+SQLite **does not support RIGHT JOIN or FULL OUTER JOIN** natively. 
+However, workarounds exist using combinations of `LEFT JOIN`, `UNION`, and other SQL constructs.
+**Best Practice**: Use databases that natively support these joins for production systems.
+Below, we provide examples of workarounds for these unsupported joins.
+""")
+
+ 
+ 
+st.subheader("Workaround for RIGHT JOIN")
+st.markdown("""
+**Business Case**: Find all departments and their associated employees, including departments with no employees.
+""")
+st.code("""
+SELECT d.name AS department_name, e.name AS employee_name
+FROM departments d
+LEFT JOIN employees e ON d.id = e.department_id;
+""", language="sql")
+st.warning("This is a workaround for RIGHT JOIN. Use RIGHT JOIN if supported by your database for better clarity and performance.")
+
+st.subheader("Workaround for FULL OUTER JOIN")
+st.markdown("""
+**Business Case**: List all employees and all projects, even if some employees are not assigned to projects or some projects have no assigned employees.
+""")
+st.code("""
+SELECT e.name AS employee_name, p.name AS project_name
+FROM employees e
+LEFT JOIN assignments a ON e.id = a.employee_id
+LEFT JOIN projects p ON a.project_id = p.id
+
+UNION
+
+SELECT e.name AS employee_name, p.name AS project_name
+FROM projects p
+LEFT JOIN assignments a ON p.id = a.project_id
+LEFT JOIN employees e ON a.employee_id = e.id;
+""", language="sql")
+st.warning("This is a workaround for FULL OUTER JOIN. Use FULL OUTER JOIN if supported by your database for better clarity and performance.")
+   

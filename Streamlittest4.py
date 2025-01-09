@@ -10,11 +10,10 @@ def execute_query(query):
 
 
 image_path = "SQL-Database.png"
-
+st.title("SQL Command Guide")
 
 
 st.image(image_path, use_container_width=True)
-st.title("SQL Command Guide")
 st.write("This guide covers essential SQL Commands with examples and business use cases")
 
 
@@ -28,9 +27,6 @@ image_path_turtles = "turtles3.png"
 
 
 st.image(image_path_turtles, use_container_width=True)
-st.title("SQL Command Guide")
-st.write("This guide covers essential SQL Commands with examples and business use cases")
-
 
 st.subheader("Data Analysts")
 st.write(

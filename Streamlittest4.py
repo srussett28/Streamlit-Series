@@ -20,11 +20,11 @@ st.write("This guide covers essential SQL Commands with examples and business us
 
 
 st.header("Why SQL is Relevant for Data Professionals")
-st.write("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
+st.write("SQL is the cornerstone of working with data, serving as a universal tool for accessing, manipulating, and analyzing information stored in relational databases. This section explores why SQL remains a vital skill across various roles in the data field—whether you're a Data Analyst uncovering insights, a Data Scientist building models, an Analytics Engineer transforming data pipelines, or a Data Engineer managing vast data ecosystems"  )
 
 
 image_path_turtles = "turtles3.png" 
-
+st.write("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
 
 st.image(image_path_turtles, use_container_width=True)
 
@@ -95,10 +95,11 @@ st.write(
 st.header("Basic SQL Commands")
 image_path_Basic = "BasicSQL.png" 
 st.image(image_path_Basic, use_container_width=True)
+
 st.subheader("SELECT")
 st.write("""
--** What It Does**: Retrieves Data from one or more tables in a database.
--** Selecting Specific Columns**: Select * retrieves all columns from the table(s), while selecting for specific columns follows this path
+- **What It Does**:Retrieves Data from one or more tables in a database.
+- ** Selecting Specific Columns**: Select * retrieves all columns from the table(s), while selecting for specific columns follows this path
 SELECT column 1, column 2, column 3 etc. 
 - **Category**: Data Query Language (DQL)
 - **Roles Most Likely to Use**: 
@@ -106,8 +107,8 @@ SELECT column 1, column 2, column 3 etc.
    - **Data Scientist**: Retrieves data for cleaning and modeling.
    - **Analytics Engineer**: Queries data for pipeline processing.
    - **Data Engineer**: Retrieves data for data pipeline and storage.
--** Business Case**: Retrieve customer information, analyzing sales data, and even generating inventiory reports.
--** Keywords**: "Pull", "Show', "Retrieve", "List", "Extract". 
+- ** Business Case**: Retrieve customer information, analyzing sales data, and even generating inventiory reports.
+- ** Keywords**: "Pull", "Show', "Retrieve", "List", "Extract". 
 """ )
 st.code("SELECT * FROM orders WHERE status = 'Shipped';", language="sql")
 

@@ -200,7 +200,6 @@ st.markdown("""
   - **Data Analyst**: Frequently used to filter data based on a predefined list of values.
   - **Data Science**: Applied to categorize or segment data for further analysis.
   - **Analytics Engineer**: Used in data extraction and transformation processes to filter based on a list of valid values.
-- **Syntax Example**: Use IN to match a column value against a list of specific values.
 - **Business Case**: Fetching records with specific criteria, such as orders placed by a list of key customers.
 - **Keywords**: "List", "Subset", "Match specific values".
 """)

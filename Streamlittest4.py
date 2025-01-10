@@ -11,25 +11,25 @@ def execute_query(query):
 
 image_path = "SQL-Database.png"
 st.title("SQL Command Guide")
-
+st.markdown("This guide covers essential SQL Commands with examples and business use cases")
 
 st.image(image_path, use_container_width=True)
-st.write("This guide covers essential SQL Commands with examples and business use cases")
+
 
 
 
 
 st.header("Why SQL is Relevant for Data Professionals")
-st.write("SQL is the cornerstone of working with data, serving as a universal tool for accessing, manipulating, and analyzing information stored in relational databases. This section explores why SQL remains a vital skill across various roles in the data field—whether you're a Data Analyst uncovering insights, a Data Scientist building models, an Analytics Engineer transforming data pipelines, or a Data Engineer managing vast data ecosystems"  )
+st.markdown("SQL is the cornerstone of working with data, serving as a universal tool for accessing, manipulating, and analyzing information stored in relational databases. This section explores why SQL remains a vital skill across various roles in the data field—whether you're a Data Analyst uncovering insights, a Data Scientist building models, an Analytics Engineer transforming data pipelines, or a Data Engineer managing vast data ecosystems"  )
 
 
 image_path_turtles = "turtles3.png" 
-st.write("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
 
 st.image(image_path_turtles, use_container_width=True)
+st.markdown("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
 
 st.subheader("Data Analysts")
-st.write(
+st.markdown(
     "Data analysts use SQL to extract, manipulate, and analyze data from databases. "
     "SQL helps them to query large datasets, generate reports, and perform data aggregations "
     "to support business decisions. Analysts rely on SQL for routine tasks like data extraction, filtering, and summarizing."
@@ -37,7 +37,7 @@ st.write(
 
 
 st.subheader("Data Scientists")
-st.write(
+st.markdown(
     "Data scientists need SQL to work with data directly in databases, especially when handling large datasets. "
     "They use SQL to extract clean, relevant data for analysis and modeling. SQL also helps in data wrangling and "
     "preparing datasets for machine learning models."
@@ -45,14 +45,14 @@ st.write(
 
 
 st.subheader("Analytics Engineers")
-st.write(
+st.markdown(
     "Analytics engineers leverage SQL to design and maintain robust data pipelines that ensure data availability for analysis. "
     "They also write complex queries to support analytics tools and optimize data storage for faster query performance."
 )
 
 
 st.subheader("Data Engineers")
-st.write(
+st.markdown(
     "Data engineers use SQL to build and maintain databases, data warehouses, and ETL pipelines. "
     "SQL plays a key role in defining and managing the structure of data in these systems, ensuring it is clean, organized, "
     "and easy to query for other roles like data analysts and data scientists."
@@ -64,31 +64,31 @@ image_path_categories = "SQLCAT.png"
 st.image(image_path_categories, use_container_width=True)
 
 st.subheader("1. Data Definition Language (DDL)")
-st.write(
+st.markdown(
     "DDL commands are used to define and manage database structures like tables, schemas, and indexes. They include commands"
    
 )
 
 
 st.subheader("2. Data Manipulation Language (DML)")
-st.write(
+st.markdown(
     "DML commands are used to manipulate data stored in the database. These commands allow you to query and update data."
 )
 
 
 st.subheader("3. Data Control Language (DCL)")
-st.write(
+st.markdown(
     "DCL commands are used to manage access permissions on database objects."
 )
 
 
 st.subheader("4. Transaction Control Language (TCL)")
-st.write(
+st.markdown(
     "TCL commands are used to manage transactions in a database. These commands help ensure data integrity and consistency. " 
 )
 
 st.subheader("5. Transaction Control Language (DQL)")
-st.write(
+st.markdown(
     "DQL commands are focused on querying data from the database. These commands are used to retrieve, filter, and sort data."
 )
 
@@ -97,9 +97,9 @@ image_path_Basic = "BasicSQL.png"
 st.image(image_path_Basic, use_container_width=True)
 
 st.subheader("SELECT")
-st.write("""
+st.markdown("""
 - **What It Does**:Retrieves Data from one or more tables in a database.
-- ** Selecting Specific Columns**: Select * retrieves all columns from the table(s), while selecting for specific columns follows this path
+- **Selecting Specific Columns**: Select * retrieves all columns from the table(s), while selecting for specific columns follows this path
 SELECT column 1, column 2, column 3 etc. 
 - **Category**: Data Query Language (DQL)
 - **Roles Most Likely to Use**: 
@@ -107,14 +107,14 @@ SELECT column 1, column 2, column 3 etc.
    - **Data Scientist**: Retrieves data for cleaning and modeling.
    - **Analytics Engineer**: Queries data for pipeline processing.
    - **Data Engineer**: Retrieves data for data pipeline and storage.
-- ** Business Case**: Retrieve customer information, analyzing sales data, and even generating inventiory reports.
-- ** Keywords**: "Pull", "Show', "Retrieve", "List", "Extract". 
+- **Business Case**: Retrieve customer information, analyzing sales data, and even generating inventiory reports.
+- **Keywords**: "Pull", "Show', "Retrieve", "List", "Extract". 
 """ )
 st.code("SELECT * FROM orders WHERE status = 'Shipped';", language="sql")
 
 
 st.subheader("INSERT INTO")
-st.write("""
+st.markdown("""
 - **What It Does**: Adds new data into a table in the database. This can include inserting a single row or multiple rows of data.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**: 
@@ -127,7 +127,7 @@ st.code("INSERT INTO customers (name, email, age) VALUES ('John Doe', 'john@exam
 
 
 st.subheader("UPDATE")
-st.write("""
+st.markdown("""
 - **What It Does**: Modifies existing data in a table based on specified conditions. Allows for updating one or more rows.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**: 
@@ -142,7 +142,7 @@ st.code("UPDATE products SET price = 19.99 WHERE product_id = 101;", language="s
 
 
 st.subheader("DELETE")
-st.write("""
+st.markdown("""
 - **What It Does**: Removes rows from a table based on specified conditions. Be cautious as it can delete one or all rows if no condition is applied.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -160,7 +160,7 @@ st.header("Filtering Data Commands")
 image_path_filter = "filtering.jpg"
 st.image(image_path_filter, use_container_width=True)
 st.subheader("WHERE")
-st.write("""
+st.markdown("""
 - **What It Does**: Filters records based on specific conditions. Used with `SELECT`, `UPDATE`, and `DELETE` to target rows.
 - **Category**: DML (Data Manipulation Language)
 - **Most Likely to Use**:
@@ -174,7 +174,7 @@ st.code("SELECT * FROM orders WHERE status = 'Shipped';", language="sql")
 
 
 st.subheader("AND/OR/NOT")
-st.write("""
+st.markdown("""
 - **What It Does**: Combines multiple conditions in a `WHERE` clause:
   - `AND`: All conditions must be true.
   - `OR`: At least one condition must be true.
@@ -193,7 +193,7 @@ st.code("SELECT * FROM products WHERE NOT category = 'Electronics';", language="
 
 
 st.subheader("IN")
-st.write("""
+st.markdown("""
 - **What It Does**: Matches a value against a list of specified values.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -208,7 +208,7 @@ st.code("SELECT * FROM orders WHERE status IN ('Shipped', 'Processing', 'Pending
 
 
 st.subheader("BETWEEN")
-st.write("""
+st.markdown("""
 - **What It Does**: Filters rows where a column value lies within a specified range (inclusive).
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -222,7 +222,7 @@ st.code("SELECT * FROM sales WHERE sale_date BETWEEN '2023-01-01' AND '2023-12-3
 
 
 st.subheader("LIKE")
-st.write("""
+st.markdown("""
 - **What It Does**: Matches patterns in text using wildcard characters (`%` and `_`).
   - `%`: Matches zero or more characters.
   - `_`: Matches a single character.
@@ -238,7 +238,7 @@ st.code("SELECT * FROM customers WHERE name LIKE 'J%';", language="sql")
 
 
 st.subheader("IS NULL/IS NOT NULL")
-st.write("""
+st.markdown("""
 - **What It Does**: Checks whether a column has null (missing) values or not.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -253,7 +253,7 @@ st.code("SELECT * FROM customers WHERE email IS NOT NULL;", language="sql")
 
 
 st.subheader("EXISTS")
-st.write("""
+st.markdown("""
 - **What It Does**: Tests for the existence of any record in a subquery. Returns `TRUE` if the subquery yields results.
 - **Category**: DML (Data Manipulation Language) / Subqueries
 - **Roles Most Likely to Use**:
@@ -269,7 +269,7 @@ st.header("Sorting & Limiting Data")
 image_path_sorting = "sorting.jpg"
 st.image(image_path_sorting, use_container_width=True)
 st.subheader("ORDER BY")
-st.write("""
+st.markdown("""
 - **What It Does**: Sorts the result set by one or more columns in ascending (`ASC`) or descending (`DESC`) order.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**: 
@@ -283,7 +283,7 @@ st.code("SELECT * FROM employees ORDER BY hire_date DESC;", language="sql")
 
 
 st.subheader("LIMIT")
-st.write("""
+st.markdown("""
 - **What It Does**: Restricts the number of rows returned in the result set.
  **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**: 
@@ -298,7 +298,7 @@ st.code("SELECT * FROM customers ORDER BY total_spent DESC LIMIT 5;", language="
 
 
 st.subheader("DISTINCT")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns only unique values, removing duplicates from the result set.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**: 
@@ -315,7 +315,7 @@ st.code("SELECT DISTINCT status FROM orders;", language="sql")
 st.header("Aggregating Data")
 image_path_aggregate = "aggrgate.png"
 st.image(image_path_aggregate, use_container_width=True)
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the number of rows matching a specified condition.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -330,7 +330,7 @@ st.code("SELECT COUNT(customer_id) FROM customers;", language="sql")
 
 
 st.subheader("SUM()")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the total sum of a numeric column.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -347,7 +347,7 @@ st.code("SELECT SUM(quantity) FROM inventory;", language="sql")
 
 
 st.subheader("AVG()")
-st.write("""
+st.markdown("""
 - **What It Does**: Calculates the average value of a numeric column.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -362,7 +362,7 @@ st.code("SELECT AVG(salary) FROM employees WHERE department = 'Engineering';", l
 
 
 st.subheader("MIN()")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the smallest value in a specified column.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -378,7 +378,7 @@ st.code("SELECT MIN(hire_date) FROM employees;", language="sql")
 
 
 st.subheader("MAX()")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the largest value in a specified column.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -393,7 +393,7 @@ st.code("SELECT MAX(delivery_date) FROM orders;", language="sql")
 
 
 st.subheader("GROUP BY")
-st.write("""
+st.markdown("""
 - **What It Does**: Groups rows that have the same values in specified columns, often used with aggregate functions.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -408,7 +408,7 @@ st.code("SELECT category, COUNT(*) FROM products GROUP BY category;", language="
 
 
 st.subheader("HAVING")
-st.write("""
+st.markdown("""
 - **What It Does**: Filters grouped data based on a specified condition, often used with aggregate functions.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -432,7 +432,7 @@ image_path_zipper = "ZipperJoin.png"
 st.image(image_path_zipper, use_container_width=True)
 
 st.subheader("INNER JOIN")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns rows when there is a match in both joined tables.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -450,7 +450,7 @@ INNER JOIN orders ON customers.customer_id = orders.customer_id;
 
 
 st.subheader("LEFT JOIN")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns all rows from the left table and matched rows from the right table. Unmatched rows in the right table result in `NULL`.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -468,7 +468,7 @@ LEFT JOIN orders ON customers.customer_id = orders.customer_id;
 
 
 st.subheader("RIGHT JOIN")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns all rows from the right table and matched rows from the left table. Unmatched rows in the left table result in `NULL`.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -486,7 +486,7 @@ RIGHT JOIN orders ON customers.customer_id = orders.customer_id;
 
 
 st.subheader("FULL OUTER JOIN")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns all rows from both tables, with `NULL` in columns where there is no match.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -504,7 +504,7 @@ FULL OUTER JOIN orders ON customers.customer_id = orders.customer_id;
 
 
 st.subheader("CROSS JOIN")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the Cartesian product of two tables, combining each row in the first table with every row in the second table.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -522,7 +522,7 @@ CROSS JOIN categories;
 
 
 st.subheader("SELF JOIN")
-st.write("""
+st.markdown("""
 - **What It Does**: Joins a table to itself to compare rows within the same table.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**:
@@ -543,7 +543,7 @@ st.header("Subqueries")
 image_path_subqueries = "subqueries.png"
 st.image(image_path_subqueries, use_container_width=True)
 st.subheader("Subquery in SELECT")
-st.write("""
+st.markdown("""
 - **What It Does**: Allows using the result of another query as a derived value within the `SELECT` statement.
 - **Category**: Data Query Language (DQL)
 - **Roles Most Likely to Use**: 
@@ -563,7 +563,7 @@ FROM customers o1;
 
 
 st.subheader("Subquery in WHERE")
-st.write("""
+st.markdown("""
 - **What It Does**: Filters rows based on criteria derived from another query.
 - **Category**: Data Query Language (DQL)
 - **Roles Most Likely to Use**: 
@@ -584,7 +584,7 @@ WHERE customer_id IN (
 
 
 st.subheader("Subquery in FROM")
-st.write("""
+st.markdown("""
 - **What It Does**: Treats the result of a subquery as a temporary table that can be queried further.
 - **Category**: Data Query Language (DQL)
 - **Roles Most Likely to Use**: 
@@ -608,7 +608,7 @@ GROUP BY region;
 st.header("Set Operations")
 image_path_ops = "operations.jpg"
 st.image(image_path_ops, use_container_width=True)
-st.write("""
+st.markdown("""
 - **What It Does**: Combines the results of two or more `SELECT` queries into a single result set, removing duplicates.
 **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**: 
@@ -646,7 +646,7 @@ FROM in_store_orders;
 
 
 st.subheader("INTERSECT")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns only the rows that are present in both queries' result sets.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**: 
@@ -665,7 +665,7 @@ FROM in_store_orders;
 
 
 st.subheader("EXCEPT")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns rows from the first query that are not present in the second query's result set.
 - **Category**: DQL (Data Query Language)
 - **Roles Most Likely to Use**: 
@@ -687,7 +687,7 @@ st.header("Data Modification")
 image_path_modification = "modification.png"
 st.image(image_path_modification, use_container_width=True)
 st.subheader("INSERT")
-st.write("""
+st.markdown("""
 - **What It Does**: Adds new rows to a table.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**: 
@@ -704,7 +704,7 @@ VALUES (1, 'John Doe', 'john.doe@example.com');
 
 
 st.subheader("UPDATE")
-st.write("""
+st.markdown("""
 - **What It Does**: Modifies existing rows in a table based on a condition.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**: 
@@ -721,7 +721,7 @@ WHERE order_id = 101;
 
 
 st.subheader("DELETE")
-st.write("""
+st.markdown("""
 - **What It Does**: Removes rows from a table based on a condition.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**: 
@@ -740,7 +740,7 @@ st.header("Indexing")
 image_path_index = "index.png"
 st.image(image_path_index, use_container_width=True)
 st.subheader("CREATE INDEX")
-st.write("""
+st.markdown("""
 - **What It Does**: Creates an index on a table to speed up data retrieval operations.
 - **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**: 
@@ -755,7 +755,7 @@ ON customers (customer_name);
 """, language="sql")
 
 st.subheader("DROP INDEX")
-st.write("""
+st.markdown("""
 - **What It Does**: Removes an existing index from a table.
  **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**: 
@@ -769,7 +769,7 @@ ON customers;
 """, language="sql")
 
 st.subheader("UNIQUE INDEX")
-st.write("""
+st.markdown("""
 - **What It Does**: Ensures all values in the indexed column(s) are unique, preventing duplicates.
 - **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**: 
@@ -783,7 +783,7 @@ ON customers (email);
 """, language="sql")
 
 st.subheader("FULLTEXT INDEX")
-st.write("""
+st.markdown("""
 - **What It Does**: Creates an index optimized for full-text search in text columns.
 - **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**: 
@@ -797,7 +797,7 @@ ON products (description);
 """, language="sql")
  
 st.subheader("COMPOSITE INDEX")
-st.write("""
+st.markdown("""
 - **What It Does**: Creates an index on two or more columns, optimizing queries that filter or sort on multiple columns.
 - **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**: 
@@ -816,7 +816,7 @@ st.header("Transactions")
 image_path_transaction = "transaction.png"
 st.image(image_path_transaction, use_container_width=True)
 st.subheader("BEGIN TRANSACTION")
-st.write("""
+st.markdown("""
 - **What It Does**: Starts a new transaction to group multiple SQL operations as a single unit of work.
 - **Category**: Transaction Control Language (TCL)
 - **Roles Most Likely to Use**: 
@@ -834,7 +834,7 @@ UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
 
 
 st.subheader("COMMIT")
-st.write("""
+st.markdown("""
 - **What It Does**: Saves all changes made during the transaction permanently to the database.
 - **Category**: Transaction Control Language (TCL)
 - **Roles Most Likely to Use**: 
@@ -852,7 +852,7 @@ COMMIT;
 
 
 st.subheader("ROLLBACK")
-st.write("""
+st.markdown("""
 - **What It Does**: Undoes all changes made during the transaction, reverting the database to its previous state.
 - **Category**: Transaction Control Language (TCL)
 - **Roles Most Likely to Use**: 
@@ -870,7 +870,7 @@ ROLLBACK;
 
 
 st.subheader("SAVEPOINT")
-st.write("""
+st.markdown("""
 - **What It Does**: Creates a checkpoint within a transaction, allowing partial rollbacks to that point without undoing the entire transaction.
 - **Category**: Transaction Control Language (TCL)
 - **Roles Most Likely to Use**: 
@@ -890,7 +890,7 @@ COMMIT;
 
 
 st.subheader("SET TRANSACTION ISOLATION LEVEL")
-st.write("""
+st.markdown("""
 - **What It Does**: Configures the isolation level for a transaction, determining the visibility of changes made by other transactions.
 - **Category**: Transaction Control Language (TCL)
 - **Roles Most Likely to Use**: 
@@ -911,7 +911,7 @@ st.header("Views")
 image_path_views = "views.jpg" 
 st.image(image_path_views, use_container_width=True)
 st.subheader("CREATE VIEW")
-st.write("""
+st.markdown("""
 - **What It Does**: Creates a virtual table (view) based on the result set of an SQL query. Views can simplify complex queries by encapsulating them in reusable objects.
 - **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**:
@@ -929,7 +929,7 @@ WHERE status = 'Active';
 
 
 st.subheader("DROP VIEW")
-st.write("""
+st.markdown("""
 - **What It Does**: Removes a view from the database.
 - **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**:
@@ -944,7 +944,7 @@ DROP VIEW Active_Customers;
 
 
 st.subheader("ALTER VIEW")
-st.write("""
+st.markdown("""
 - **What It Does**: Modifies an existing view's definition without deleting and recreating it.
 - **Category**: Data Definition Language (DDL)
 - **Roles Most Likely to Use**:
@@ -962,7 +962,7 @@ WHERE status = 'Active';
 
 
 st.subheader("INSERT INTO VIEW")
-st.write("""
+st.markdown("""
 - **What It Does**: Inserts data into a table through a view if the view is updatable (based on specific rules).
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -978,7 +978,7 @@ VALUES (101, 'John Doe', 'johndoe@example.com');
 
 
 st.subheader("UPDATE VIEW")
-st.write("""
+st.markdown("""
 - **What It Does**: Updates data in a table through a view if the view is updatable.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -998,7 +998,7 @@ st.header("Triggers")
 image_path_trigger = "trigger.png"
 st.image(image_path_trigger, use_container_width=True)
 st.subheader("CREATE TRIGGER")
-st.write("""
+st.markdown("""
 - **What It Does**: Creates a trigger, a stored procedure that automatically executes in response to specific events (INSERT, UPDATE, DELETE) on a table or view.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -1019,7 +1019,7 @@ END;
 
 
 st.subheader("DROP TRIGGER")
-st.write("""
+st.markdown("""
 - **What It Does**: Removes a trigger from the database.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -1034,7 +1034,7 @@ DROP TRIGGER after_order_insert;
 
 
 st.subheader("AFTER INSERT/UPDATE/DELETE")
-st.write("""
+st.markdown("""
 - **What It Does**: Executes the trigger's code after an INSERT, UPDATE, or DELETE operation is performed on a table.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -1055,7 +1055,7 @@ END;
 
 
 st.subheader("BEFORE INSERT/UPDATE/DELETE")
-st.write("""
+st.markdown("""
 - **What It Does**: Executes the trigger's code before an INSERT, UPDATE, or DELETE operation is performed on a table.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -1079,7 +1079,7 @@ st.header("Common Table Expressions")
 image_path_CTE = "CTE.png"
 st.image(image_path_CTE, use_container_width=True)
 st.subheader("WITH CTE AS")
-st.write("""
+st.markdown("""
 - **What It Does**: Creates a Common Table Expression (CTE), a temporary result set that can be referenced within a SQL query.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -1101,7 +1101,7 @@ WHERE order_count > 5;
 
 
 st.subheader("RECURSIVE CTE")
-st.write("""
+st.markdown("""
 - **What It Does**: Extends the capabilities of a CTE to allow recursive queries, which call themselves iteratively.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -1127,7 +1127,7 @@ FROM EmployeeHierarchy;
 
 
 st.subheader("WITH TEMPORARY CTE")
-st.write("""
+st.markdown("""
 - **What It Does**: A variant of CTEs that acts as a temporary construct, often for session-specific or throwaway computations.
 - **Category**: Data Manipulation Language (DML)
 - **Roles Most Likely to Use**:
@@ -1152,7 +1152,7 @@ st.header("Window Functions")
 image_path_windows = "windowfunctions.png"
 st.image(image_path_windows, use_container_width=True)
 st.subheader("ROW_NUMBER()")
-st.write("""
+st.markdown("""
 - **What It Does**: Assigns a unique sequential integer to rows within a partition, starting at 1.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1169,7 +1169,7 @@ FROM employees;
 
 
 st.subheader("RANK()")
-st.write("""
+st.markdown("""
 - **What It Does**: Assigns a rank to rows in a partition based on order, with gaps for ties.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1186,7 +1186,7 @@ FROM employees;
 
 
 st.subheader("DENSE_RANK()")
-st.write("""
+st.markdown("""
 - **What It Does**: Similar to `RANK()` but without gaps for ties.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1203,7 +1203,7 @@ FROM employees;
 
 
 st.subheader("NTILE()")
-st.write("""
+st.markdown("""
 - **What It Does**: Divides rows into a specified number of buckets and assigns a bucket number.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1220,7 +1220,7 @@ FROM employees;
 
 
 st.subheader("LEAD()")
-st.write("""
+st.markdown("""
 - **What It Does**: Provides access to the next row's value in the same partition.
 - **Category**: DML (Data Manipulation Language)
  - **Roles Most Likely to Use**:
@@ -1237,7 +1237,7 @@ FROM employees;
 
 
 st.subheader("LAG()")
-st.write("""
+st.markdown("""
 - **What It Does**: Provides access to the previous row's value in the same partition.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1254,7 +1254,7 @@ FROM employees;
 
 
 st.subheader("FIRST_VALUE()")
-st.write("""
+st.markdown("""
 - **What It Does**: Retrieves the first value in the window partition.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1271,7 +1271,7 @@ FROM employees;
 
 
 st.subheader("LAST_VALUE()")
-st.write("""
+st.markdown("""
 - **What It Does**: Retrieves the last value in the window partition.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1288,7 +1288,7 @@ FROM employees;
 
 
 st.subheader("SUM() OVER")
-st.write("""
+st.markdown("""
 - **What It Does**: Computes a running total or aggregate over a partition.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1305,7 +1305,7 @@ FROM employees;
 
 
 st.subheader("AVG() OVER")
-st.write("""
+st.markdown("""
 - **What It Does**: Computes a running average or aggregate over a partition.
 - **Category**: DML (Data Manipulation Language)
  **Roles Most Likely to Use**:
@@ -1322,7 +1322,7 @@ FROM employees;
 
 
 st.subheader("PARTITION BY")
-st.write("""
+st.markdown("""
 - **What It Does**: Divides a result set into partitions to apply window functions separately to each partition.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1339,7 +1339,7 @@ FROM employees;
 
 
 st.subheader("ORDER BY")
-st.write("""
+st.markdown("""
 - **What It Does**: Defines the order of rows within a partition for window functions.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1359,7 +1359,7 @@ st.header("Date & Time Functions")
 image_path_date = "calendar.png"
 st.image(image_path_date, use_container_width=True)
 st.subheader("GETDATE()")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the current date and time of the system.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1374,7 +1374,7 @@ SELECT GETDATE();
 
 
 st.subheader("CURRENT_TIMESTAMP")
-st.write("""
+st.markdown("""
 - **What It Does**: Provides the current date and time in UTC.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1389,7 +1389,7 @@ SELECT CURRENT_TIMESTAMP;
 
 
 st.subheader("DATEADD()")
-st.write("""
+st.markdown("""
 - **What It Does**: Adds a specific interval to a date.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1404,7 +1404,7 @@ SELECT DATEADD(day, 10, '2024-12-27') AS NewDate;
 
 
 st.subheader("DATEDIFF()")
-st.write("""
+st.markdown("""
 - **What It Does**: Calculates the difference between two dates in specified units (days, months, etc.).
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1419,7 +1419,7 @@ SELECT DATEDIFF(day, '2024-01-01', '2024-12-27') AS DaysElapsed;
 
 
 st.subheader("DATEPART()")
-st.write("""
+st.markdown("""
 - **What It Does**: Extracts a specific part of a date (e.g., year, month, day).
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1434,7 +1434,7 @@ SELECT DATEPART(year, '2024-12-27') AS YearPart;
 
 
 st.subheader("DATE_FORMAT()")
-st.write("""
+st.markdown("""
 - **What It Does**: Formats a date value into a specified format.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1449,7 +1449,7 @@ SELECT DATE_FORMAT('2024-12-27', '%W, %M %d, %Y') AS FormattedDate;
 
 
 st.subheader("NOW()")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the current date and time.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1464,7 +1464,7 @@ SELECT NOW();
 
 
 st.subheader("EXTRACT()")
-st.write("""
+st.markdown("""
 - **What It Does**: Extracts a specified part (e.g., year, month) from a date or time.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1479,7 +1479,7 @@ SELECT EXTRACT(YEAR FROM '2024-12-27') AS ExtractedYear;
 
 
 st.subheader("TIMESTAMPDIFF()")
-st.write("""
+st.markdown("""
 - **What It Does**: Calculates the difference between two timestamps in a specified unit (e.g., seconds, hours).
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1497,7 +1497,7 @@ st.header("Conditional Logic")
 image_path_logic = "logic.png"  
 st.image(image_path_logic, use_container_width=True)
 st.subheader("CASE WHEN")
-st.write("""
+st.markdown("""
 - **What It Does**: Allows conditional logic within SQL queries. It evaluates conditions and returns specific values based on those conditions.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1520,7 +1520,7 @@ FROM employees;
 
 
 st.subheader("IFNULL()")
-st.write("""
+st.markdown("""
 - **What It Does**: Replaces `NULL` values with a specified replacement value.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:
@@ -1538,7 +1538,7 @@ FROM employee_bonuses;
 
 
 st.subheader("COALESCE()")
-st.write("""
+st.markdown("""
 - **What It Does**: Returns the first non-`NULL` value from a list of arguments.
 - **Category**: DML (Data Manipulation Language)
 - **Roles Most Likely to Use**:

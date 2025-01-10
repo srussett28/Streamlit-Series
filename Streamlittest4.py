@@ -26,7 +26,7 @@ st.markdown("SQL is the cornerstone of working with data, serving as a universal
 image_path_turtles = "turtles3.png" 
 
 st.image(image_path_turtles, use_container_width=True)
-st.markdown("Data Analysts, Data Scientists, Analytics Engineers, Data Engineers")
+st.markdown("**Data Analysts, Data Scientists, Analytics Engineers, Data Engineers**")
 
 st.subheader("Data Analysts")
 st.markdown(

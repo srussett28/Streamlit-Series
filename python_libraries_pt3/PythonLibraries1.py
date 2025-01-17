@@ -28,12 +28,12 @@ st.write("Welcome to the Essential Python Libraries for Analysts, Scientists, an
 
 
 st.title("Essential Libaries for Data Analysts (If your up for it)")
-image_path_analyst = "data-analyst1.jpg"
+image_path_analyst = "python_libraries_pt3/data-analyst1.jpg"
 st.image(image_path_analyst, use_container_width=True)
 
 
 st.subheader("1. Pandas: The Data Manipulation Powerhouse")
-image_path_pandas = "pandas2.png"
+image_path_pandas = "python_libraries_pt3/pandas2.png"
 st.image(image_path_pandas, use_container_width=True)
 st.warning(""" Use Case: Sales Data Analysis (aka ‘Make It Pretty for the Executive Team’)""")
 st.markdown(""" You’ve got sales data that looks like it was written in a hurry by a caffeinated jack russell. Pandas helps you clean it up, calculate revenues, and make it look like you spent hours on it (when it really took 15 minutes).
@@ -209,7 +209,7 @@ print("Data exported to Excel!")
 
 
 st.subheader(" NumPy: Number Cruncher")
-image_path_pandas = "Numpy.png"
+image_path_pandas = "python_libraries_pt3/Numpy.png"
 st.image(image_path_pandas,caption="https://github.com/numpy/numpy.org/issues/37", use_container_width=True)
 
 
@@ -264,7 +264,7 @@ print(random_numbers)
 
 
 st.subheader("Matplotlib: Paint Data Like Picasso")
-image_path_matplotlib = "matplot3.png"
+image_path_matplotlib = "python_libraries_pt3/matplot3.png"
 st.image(image_path_matplotlib, use_container_width=True)
 
 
@@ -294,14 +294,14 @@ plt.title("Scatter Plot Example")
 plt.show()
 """, language="python")
 
-image_path_graph = "Matplotgraph.png"
+image_path_graph = "python_libraries_pt3/Matplotgraph.png"
 st.image(image_path_graph,caption="https://coding-blocks.github.io/DS-NOTES/1.2%20Introduction%20to%20Matplotlib.html", use_container_width=True)
 
 
 
 
 st.subheader("Seaborn: Stylish Data Visualizations")
-image_path_seaborn = "seaborn2.png"
+image_path_seaborn = "python_libraries_pt3/seaborn2.png"
 st.image(image_path_seaborn,caption= "https://datascientest.com/en/seaborn_and_data_visualization" , use_container_width=True)
 
 
@@ -331,7 +331,7 @@ plt.title("Boxplot Example")
 plt.show()
 """, language="python")
 
-image_path_seaborngraph = "seaborngraph.png"
+image_path_seaborngraph = "python_libraries_pt3/seaborngraph.png"
 st.image(
     image_path_seaborngraph, 
     caption="[Seaborn Function Overview](https://seaborn.pydata.org/tutorial/function_overview.html)", 
@@ -340,7 +340,7 @@ st.image(
 
 
 st.subheader("openpyxl: The Excel Whisperer")
-image_path_openpyxl = "yxl.png"
+image_path_openpyxl = "python_libraries_pt3/yxl.png"
 st.image(image_path_openpyxl, use_container_width=True)
 
 
@@ -370,12 +370,12 @@ workbook.save("example.xlsx")
 
 
 st.title("Essential Libaries for Data Scientists")
-image_path_science = "DS.png"
+image_path_science = "python_libraries_pt3/DS.png"
 st.image(image_path_science, use_container_width=True)
 st.warning("To avoid redundency, Pandas and Numpy are not listed here.The majority of uses won't deviate from the analyst write up. But if you have a special or more advanced use, send it my way.")
 
 st.subheader("scikit-learn: A Machine Learning Maestro")
-image_path_sklearn = "scikit2.png"
+image_path_sklearn = "python_libraries_pt3/scikit2.png"
 st.image(image_path_sklearn, use_container_width=True)
 
 
@@ -525,7 +525,7 @@ average_score = scores.mean()
 
 
 st.subheader("Statsmodels: The Statistical Powerhouse")
-image_path_statmodels = "statmodels2.png"
+image_path_statmodels = "python_libraries_pt3/statmodels2.png"
 st.image(image_path_statmodels, use_container_width=True)
 
 
@@ -608,7 +608,7 @@ print(anova_results)
 
 
 st.subheader("TensorFlow: The Deep Learning Dynamo")
-image_path_tensorflow = "tensor.png"
+image_path_tensorflow = "python_libraries_pt3/tensor.png"
 st.image(image_path_tensorflow, caption= "https://www.wired.com/2015/11/google-open-sources-its-artificial-intelligence-engine/",use_container_width=True)
 st.warning("""
 **Heads up!** PyTorch is a popular alternative to TensorFlow.  
@@ -692,7 +692,7 @@ pretrained_model.summary()
 """, language="python")
 
 st.subheader("NLTK: The NLP Classic")
-image_path_nltk = "nltk2.png"
+image_path_nltk = "python_libraries_pt3/nltk2.png"
 st.image(image_path_nltk, use_container_width=True)
 
 st.warning("""
@@ -765,7 +765,7 @@ print("Lemmatized:", lemmatizer.lemmatize(word, pos='v'))
 
 
 st.subheader("XGBoost: The Gradient Boosting Powerhouse")
-image_path_xgboost = "xgboost.png"
+image_path_xgboost = "python_libraries_pt3/xgboost.png"
 st.image(image_path_xgboost, use_container_width=True)
 
 st.warning("""
@@ -841,7 +841,7 @@ model.fit(X_train_with_missing, y_train)
 
 
 st.title("Essential Libaries for Data Engineers")
-image_path_engineer = "de2.png"
+image_path_engineer = "python_libraries_pt3/de2.png"
 st.image(image_path_engineer, use_column_width=True)
 st.markdown("To avoid redundency, Pandas and Numpy are not listed here.")
 
@@ -931,7 +931,7 @@ session.commit()
 
 
 st.subheader("Airflow: The Workflow Orchestrator")
-image_path_airflow = "airflow2.png"
+image_path_airflow = "python_libraries_pt3/airflow2.png"
 st.image(image_path_airflow, use_container_width=True)
 
 st.markdown("""
@@ -953,7 +953,7 @@ with DAG('example_dag', start_date=datetime(2023, 1, 1), schedule_interval='@dai
     start >> end
 """, language="python")
 
-image_path_dag = "dag.png"
+image_path_dag = "python_libraries_pt3/dag.png"
 st.image(image_path_dag, use_container_width=True)
 
 
@@ -993,7 +993,7 @@ st.code("""
 
 
 st.subheader("PySpark: The Distributed Data Engine")
-image_path_pyspark = "pyspark2.png"
+image_path_pyspark = "python_libraries_pt3/pyspark2.png"
 st.image(image_path_pyspark, caption= "https://sparkbyexamples.com/pyspark/what-is-pyspark-and-who-uses-it/",use_container_width=True)
 
 st.markdown("""
@@ -1041,7 +1041,7 @@ df.write.csv("output.csv")
 
 
 st.subheader("Dask: Parallel Computing Made Easy")
-image_path_dask = "dask2.png"
+image_path_dask = "python_libraries_pt3/dask2.png"
 st.image(image_path_dask, use_container_width=True)
 
 st.markdown("""
@@ -1088,7 +1088,7 @@ print(client)
 
 
 st.subheader("FastAPI: The High-Performance API Framework")
-image_path_fastapi = "fastapi.png"
+image_path_fastapi = "python_libraries_pt3/fastapi.png"
 st.image(image_path_fastapi, use_container_width=True)
 
 st.markdown("""
@@ -1134,7 +1134,7 @@ async def async_example():
 
 
 st.subheader("PyArrow: The Data Transport Specialist")
-image_path_pyarrow = "pyarrow2.png"
+image_path_pyarrow = "python_libraries_pt3/pyarrow2.png"
 st.image(image_path_pyarrow, use_container_width=True)
 
 st.markdown("""
@@ -1184,7 +1184,7 @@ print(arrow_array)
 
 
 st.subheader("Kafka: The Streaming Data Dynamo")
-image_path_kafka = "kafka.png"
+image_path_kafka = "python_libraries_pt3/kafka.png"
 st.image(image_path_kafka,caption= "Franz Kafka",use_container_width=True)
 
 st.markdown("""
@@ -1229,13 +1229,13 @@ producer.send('example_topic', key=b'key1', value=b'value1', partition=0)
 
 
 st.title("Essential Libaries for Analytics Engineers/ML Engineers")
-image_path_analytics = "Aeng.png"
+image_path_analytics = "python_libraries_pt3/Aeng.png"
 st.image(image_path_analytics, use_container_width=True)
 
 st.markdown("To avoid redundency, Pandas, Numpy, Scikit,Statsmodels, Tensorflow, Airflow, and Dask are not listed here.")
 
 st.subheader("MLflow: The Model Lifecycle Manager")
-image_path_mlflow = "mlflow.png"
+image_path_mlflow = "python_libraries_pt3/mlflow.png"
 st.image(image_path_mlflow, use_container_width=True)
 
 st.markdown("""
@@ -1279,7 +1279,7 @@ mlflow.models.serve("model_name", port=1234)
 
 
 st.subheader("Hugging Face Transformers: The NLP Sorcerer")
-image_path_huggingface = "huggingface.png"
+image_path_huggingface = "python_libraries_pt3/huggingface.png"
 st.image(image_path_huggingface, use_container_width=True)
 
 st.markdown("""
@@ -1333,7 +1333,7 @@ trainer.train()
 
 
 st.subheader("CatBoost: The Categorical Data Champion")
-image_path_catboost = "catboost2.png"
+image_path_catboost = "python_libraries_pt3/catboost2.png"
 st.image(image_path_catboost,caption="https://towardsdatascience.com/why-you-should-learn-catboost-now-390fb3895f76", use_container_width=True)
 
 st.markdown("""
@@ -1381,7 +1381,7 @@ print(cv_results)
 
 
 st.subheader("ONNX: The Interoperable Model Format")
-image_path_onnx = "onnx2.png"
+image_path_onnx = "python_libraries_pt3/onnx2.png"
 st.image(image_path_onnx, use_container_width=True)
 
 st.markdown("""
@@ -1419,7 +1419,7 @@ outputs = session.run(None, inputs)
 print(outputs)
 """, language="python")
 
-# Model Conversion
+
 st.markdown("""
 - **Model Conversion**: Convert models from frameworks like TensorFlow or Scikit-learn.  
   *(Ensures compatibility across tools.)*
@@ -1437,7 +1437,7 @@ with open("model.onnx", "wb") as f:
 
 
 
-# Ensure the required datasets exist
+
 def create_sample_datasets():
     datasets = {
         "sales_data.csv": """Item,Price,Quantity\nWidget,10,5\nGadget,15,3\nDoohickey,7,10""",
@@ -1450,7 +1450,7 @@ def create_sample_datasets():
             with open(filename, "w") as f:
                 f.write(content)
 
-# Create datasets if they don't exist
+
 create_sample_datasets()
 
 # Streamlit app starts here
@@ -1466,12 +1466,12 @@ datasets = {
 
 selected_dataset = st.sidebar.selectbox("Choose a dataset to explore:", list(datasets.keys()))
 
-# Load the selected dataset
+
 df = pd.read_csv(datasets[selected_dataset])
 st.write(f"### Loaded Dataset: {selected_dataset}")
 st.dataframe(df)
 
-# Run Python Code Section
+
 st.subheader("Run Python Code")
 code = st.text_area("Write your Python code here and press 'Run':", value="""
 # Example:
@@ -1499,16 +1499,16 @@ if st.button("Run"):
         st.error(f"Error: {e}")
         st.error("Please ensure your code is valid and doesn’t include risky operations like file deletions.")
 
-# File Uploader Section
+
 uploaded_file = st.file_uploader("Upload your CSV file:", type="csv")
 if uploaded_file:
     try:
-        # Preview the uploaded file
+        
         preview_df = pd.read_csv(uploaded_file, nrows=5)
         st.write("### File Preview (First 5 Rows):")
         st.dataframe(preview_df)
 
-        # Option to confirm loading
+        
         if st.button("Load Uploaded Dataset"):
             df = pd.read_csv(uploaded_file)
             st.success("Dataset loaded successfully!")
@@ -1517,7 +1517,7 @@ if uploaded_file:
     except Exception as e:
         st.error(f"Error loading file: {e}")
 
-# Visualization Section
+
 st.subheader("Quick Visualizations")
 if st.checkbox("Bar Chart"):
     x_col = st.selectbox("Select X-axis column:", df.columns)

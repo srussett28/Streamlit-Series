@@ -847,7 +847,7 @@ st.markdown("To avoid redundency, Pandas and Numpy are not listed here.")
 
 
 st.subheader("SQLAlchemy: Your personal SQL translator")
-image_path_sqlalchemy = "sqlalchemy.png"
+image_path_sqlalchemy = "python_libraries_pt3/sqlalchemy.png"
 st.image(image_path_sqlalchemy, use_container_width=True)
 
 st.markdown("""

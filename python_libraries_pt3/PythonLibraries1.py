@@ -22,7 +22,7 @@ from sqlalchemy import create_engine # type: ignore
 import requests
 
 st.title("Essential Python Libraries for Analysts, Scientists, and Engineers")
-image_path_python = "pythoncloud.jpg"
+image_path_python = "python_libraries_pt3/pythoncloud.jpg"
 st.image(image_path_python, use_container_width=True)
 st.write("Welcome to the Essential Python Libraries for Analysts, Scientists, and Engineers! This is a Streamlit app that showcases the most important Python libraries for data analysis, visualization, and machine learning. The libraries that will be covered in this app are: Pandas, NumPy, Matplotlib, Seaborn, Plotly, and Scikit-Learn. Each library will have its own section where we will explore the most important features and functions. Let's get started!")
 

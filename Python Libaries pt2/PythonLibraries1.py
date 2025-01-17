@@ -33,7 +33,7 @@ st.image(image_path_analyst, use_container_width=True)
 
 
 st.subheader("1. Pandas: The Data Manipulation Powerhouse")
-image_path_pandas = "Pandas.png"
+image_path_pandas = "pandas2.png"
 st.image(image_path_pandas, use_container_width=True)
 st.warning(""" Use Case: Sales Data Analysis (aka ‘Make It Pretty for the Executive Team’)""")
 st.markdown(""" You’ve got sales data that looks like it was written in a hurry by a caffeinated jack russell. Pandas helps you clean it up, calculate revenues, and make it look like you spent hours on it (when it really took 15 minutes).
@@ -210,7 +210,7 @@ print("Data exported to Excel!")
 
 st.subheader(" NumPy: Number Cruncher")
 image_path_pandas = "Numpy.png"
-st.image(image_path_pandas, use_container_width=True)
+st.image(image_path_pandas,caption="https://github.com/numpy/numpy.org/issues/37", use_container_width=True)
 
 
 st.markdown("""
@@ -264,7 +264,7 @@ print(random_numbers)
 
 
 st.subheader("Matplotlib: Paint Data Like Picasso")
-image_path_matplotlib = "truematplot.png"
+image_path_matplotlib = "matplot3.png"
 st.image(image_path_matplotlib, use_container_width=True)
 
 
@@ -301,8 +301,8 @@ st.image(image_path_graph,caption="https://coding-blocks.github.io/DS-NOTES/1.2%
 
 
 st.subheader("Seaborn: Stylish Data Visualizations")
-image_path_seaborn = "seaborn.png"
-st.image(image_path_seaborn, use_container_width=True)
+image_path_seaborn = "seaborn2.png"
+st.image(image_path_seaborn,caption= "https://datascientest.com/en/seaborn_and_data_visualization" , use_container_width=True)
 
 
 st.markdown("""
@@ -340,7 +340,7 @@ st.image(
 
 
 st.subheader("openpyxl: The Excel Whisperer")
-image_path_openpyxl = "xyl.png"
+image_path_openpyxl = "yxl.png"
 st.image(image_path_openpyxl, use_container_width=True)
 
 
@@ -375,7 +375,7 @@ st.image(image_path_science, use_container_width=True)
 st.warning("To avoid redundency, Pandas and Numpy are not listed here.The majority of uses won't deviate from the analyst write up. But if you have a special or more advanced use, send it my way.")
 
 st.subheader("scikit-learn: A Machine Learning Maestro")
-image_path_sklearn = "scikit.png"
+image_path_sklearn = "scikit2.png"
 st.image(image_path_sklearn, use_container_width=True)
 
 
@@ -525,7 +525,7 @@ average_score = scores.mean()
 
 
 st.subheader("Statsmodels: The Statistical Powerhouse")
-image_path_statmodels = "Statmodels.png"
+image_path_statmodels = "statmodels2.png"
 st.image(image_path_statmodels, use_container_width=True)
 
 
@@ -692,7 +692,7 @@ pretrained_model.summary()
 """, language="python")
 
 st.subheader("NLTK: The NLP Classic")
-image_path_nltk = "nltk.png"
+image_path_nltk = "nltk2.png"
 st.image(image_path_nltk, use_container_width=True)
 
 st.warning("""
@@ -841,7 +841,7 @@ model.fit(X_train_with_missing, y_train)
 
 
 st.title("Essential Libaries for Data Engineers")
-image_path_engineer = "Engineers.jpg"
+image_path_engineer = "de2.png"
 st.image(image_path_engineer, use_column_width=True)
 st.markdown("To avoid redundency, Pandas and Numpy are not listed here.")
 
@@ -931,7 +931,7 @@ session.commit()
 
 
 st.subheader("Airflow: The Workflow Orchestrator")
-image_path_airflow = "airflow.png"
+image_path_airflow = "airflow2.png"
 st.image(image_path_airflow, use_container_width=True)
 
 st.markdown("""
@@ -993,7 +993,7 @@ st.code("""
 
 
 st.subheader("PySpark: The Distributed Data Engine")
-image_path_pyspark = "pyspark.png"
+image_path_pyspark = "pyspark2.png"
 st.image(image_path_pyspark, caption= "https://sparkbyexamples.com/pyspark/what-is-pyspark-and-who-uses-it/",use_container_width=True)
 
 st.markdown("""
@@ -1041,7 +1041,7 @@ df.write.csv("output.csv")
 
 
 st.subheader("Dask: Parallel Computing Made Easy")
-image_path_dask = "dask.png"
+image_path_dask = "dask2.png"
 st.image(image_path_dask, use_container_width=True)
 
 st.markdown("""
@@ -1134,7 +1134,7 @@ async def async_example():
 
 
 st.subheader("PyArrow: The Data Transport Specialist")
-image_path_pyarrow = "pyarrow.png"
+image_path_pyarrow = "pyarrow2.png"
 st.image(image_path_pyarrow, use_container_width=True)
 
 st.markdown("""
@@ -1333,8 +1333,8 @@ trainer.train()
 
 
 st.subheader("CatBoost: The Categorical Data Champion")
-image_path_catboost = "catboost.png"
-st.image(image_path_catboost, use_container_width=True)
+image_path_catboost = "catboost2.png"
+st.image(image_path_catboost,caption="https://towardsdatascience.com/why-you-should-learn-catboost-now-390fb3895f76", use_container_width=True)
 
 st.markdown("""
 CatBoost is a gradient boosting library that handles categorical data natively. 
@@ -1381,7 +1381,7 @@ print(cv_results)
 
 
 st.subheader("ONNX: The Interoperable Model Format")
-image_path_onnx = "onnx.png"
+image_path_onnx = "onnx2.png"
 st.image(image_path_onnx, use_container_width=True)
 
 st.markdown("""

@@ -209,7 +209,7 @@ print("Data exported to Excel!")
 
 
 st.subheader(" NumPy: Number Cruncher")
-image_path_pandas = "python_libraries_pt3/Numpy.png"
+image_path_pandas = "python_libraries_pt3/numpy.png"
 st.image(image_path_pandas,caption="https://github.com/numpy/numpy.org/issues/37", use_container_width=True)
 
 

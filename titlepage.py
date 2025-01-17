@@ -42,9 +42,9 @@ st.title("Table of Contents")
 
 toc = {
     "1. The Basics (Tools, prior knowledge, key terminology etc..)"
-    "2. Everybody's favorite STATISTICCCCSSSS"
+    "2. Everybody's favorite STATISTICCCCSSSSS": "Understand the fundamentals of statistics for data analysis. Link - Under Construction",
     "3. SQL Commands for Data Professionals": "Learn essential SQL commands for analysts, engineers, and scientists. Link - [https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/](https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/)",
-    "4. Pertinent Python Libraries": "Explore must-know Python libraries tailored to different data roles. Link - Under Construction",
+    "4. Pertinent Python Libraries": "Explore must-know Python libraries tailored to different data roles. Link - https://srussett28-streamli-python-libraries-pt3pythonlibraries1-ysi6yx.streamlit.app/ ",
     "5. Data Pipelines and Workflow Automation": "Automate and orchestrate complex data workflows. Link - Under Construction",
     "6. Data Cleaning Techniques": "Master the art of wrangling messy data into shape. Link - Under Construction",
     "7. Data Modeling": "Dive into building statistical and machine learning models. Link - Under Construction",

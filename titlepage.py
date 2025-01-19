@@ -40,18 +40,30 @@ Whether you’re a data analyst, scientist, or engineer—or a mix of all three�
 st.title("Table of Contents")
 
 toc = {
-    "1. The Basics: Tools, prior knowledge, key terminology etc..": "Introductory materials to get started. Link - Under Construction",
-    "2. Everybody's favorite STATISTICCCCSSSSS": "Understand the fundamentals of statistics for data analysis. Link - Under Construction",
-    "3. SQL Commands for Data Professionals": "Learn essential SQL commands for analysts, engineers, and scientists. Link - [https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/](https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/)",
-    "4. Pertinent Python Libraries": "Explore must-know Python libraries tailored to different data roles. Link - https://srussett28-streamli-python-libraries-pt3pythonlibraries1-ysi6yx.streamlit.app/",
-    "5. Data Pipelines and Workflow Automation": "Automate and orchestrate complex data workflows. Link - Under Construction",
-    "6. Data Cleaning Techniques": "Master the art of wrangling messy data into shape. Link - Under Construction",
-    "7. Data Modeling": "Dive into building statistical and machine learning models. Link - Under Construction",
-    "8. Cloud Data Platforms": "Leverage AWS, Azure, and GCP for scalable data solutions. Link - Under Construction",
-    "9. Experimentation and A/B Testing": "Learn to run and interpret experiments effectively. Link - Under Construction",
-    "10. AI and Machine Learning": "Discover the basics of AI/ML and their practical applications. Link - Under Construction",
-    "11. Data Visualizations": "Create stunning visualizations to tell compelling stories. Link - Under Construction",
-    "12. Ethics, Governance, and Trust in Data": "Understand the importance of responsible and ethical data use. Link - Under Construction",
+    "1. The Basics: Tools, prior knowledge, key terminology etc.": 
+        "Introductory materials to get started. Link - [https://srussett28-streamlit-series-prereq2-nyxkg6.streamlit.app/](https://srussett28-streamlit-series-prereq2-nyxkg6.streamlit.app/)",
+    "2. Everybody's favorite STATISTICCCCSSSSS": 
+        "Understand the fundamentals of statistics for data analysis. Link - Under Construction",
+    "3. SQL Commands for Data Professionals": 
+        "Learn essential SQL commands for analysts, engineers, and scientists. Link - [https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/](https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/)",
+    "4. Pertinent Python Libraries": 
+        "Explore must-know Python libraries tailored to different data roles. Link - [https://srussett28-streamli-python-libraries-pt3pythonlibraries1-ysi6yx.streamlit.app/](https://srussett28-streamli-python-libraries-pt3pythonlibraries1-ysi6yx.streamlit.app/)",
+    "5. Data Pipelines and Workflow Automate": 
+        "Automate and orchestrate complex data workflows. Link - Under Construction",
+    "6. Data Cleaning Techniques": 
+        "Master the art of wrangling messy data into shape. Link - Under Construction",
+    "7. Data Modeling": 
+        "Dive into building statistical and machine learning models. Link - Under Construction",
+    "8. Cloud Data Platforms": 
+        "Leverage AWS, Azure, and GCP for scalable data solutions. Link - Under Construction",
+    "9. Experimentation and A/B Testing": 
+        "Learn to run and interpret experiments effectively. Link - Under Construction",
+    "10. AI and Machine Learning": 
+        "Discover the basics of AI/ML and their practical applications. Link - Under Construction",
+    "11. Data Visualizations": 
+        "Create stunning visualizations to tell compelling stories. Link - Under Construction",
+    "12. Ethics, Governance, and Trust in Data": 
+        "Understand the importance of responsible and ethical data use. Link - Under Construction"
 }
 
 

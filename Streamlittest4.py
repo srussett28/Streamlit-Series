@@ -3,28 +3,54 @@ import os
 import sqlite3
 import pandas as pd
 
+
+
+def main():
+    st.sidebar.title("SQL Commands Navigation")
+    
+    # Sidebar dropdown for sections
+    selected_section = st.sidebar.selectbox(
+        "Choose a SQL section:",
+        [
+            "Basic SQL Commands",
+            "Filtering Data",
+            "Sorting and Limiting Data",
+            "Aggregating",
+            "Joins",
+            "Subqueries",
+            "Set Operations",
+            "Data Modification",
+            "Indexing",
+            "Transactions",
+            "Views",
+            "Triggers",
+            "CTE (Common Table Expressions)",
+            "Window Functions",
+            "Date & Time Functions",
+            "Conditional Logic"
+        ]
+    ) 
+    
+    
 def execute_query(query):
     with sqlite3.connect("sandbox.db") as conn:
         return pd.read_sql_query(query, conn)
 
 
 
-image_path = "SQL-Database.png"
+image_path = "SQLDU.png"
+st.image(image_path, use_container_width=True)
 st.title("SQL Command Guide")
 st.markdown("This guide covers essential SQL Commands with examples and business use cases")
 
 st.image(image_path, use_container_width=True)
 
 
-
-
-
 st.header("Why SQL is Relevant for Data Professionals")
 st.markdown("SQL is the cornerstone of working with data, serving as a universal tool for accessing, manipulating, and analyzing information stored in relational databases. This section explores why SQL remains a vital skill across various roles in the data field—whether you're a Data Analyst uncovering insights, a Data Scientist building models, an Analytics Engineer transforming data pipelines, or a Data Engineer managing vast data ecosystems"  )
 
 
-image_path_turtles = "turtles3.png" 
-
+image_path_turtles = "turtlesdu.png" 
 st.image(image_path_turtles, use_container_width=True)
 st.markdown("**Data Analysts, Data Scientists, Analytics Engineers, Data Engineers**")
 
@@ -92,9 +118,11 @@ st.markdown(
     "DQL commands are focused on querying data from the database. These commands are used to retrieve, filter, and sort data."
 )
 
-st.header("Basic SQL Commands")
-image_path_Basic = "BasicSQL.png" 
-st.image(image_path_Basic, use_container_width=True)
+
+if selected_section == "Basic SQL Commands":
+        st.header("Basic SQL Commands")
+        image_path_Basic = "BasicSQL.png"
+        st.image(image_path_Basic, use_container_width=True)
 
 st.subheader("SELECT")
 st.markdown("""

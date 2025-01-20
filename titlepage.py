@@ -45,7 +45,7 @@ toc = {
     "2. Everybody's favorite STATISTICCCCSSSSS": 
         "Understand the fundamentals of statistics for data analysis. Link - Under Construction",
     "3. SQL Commands for Data Professionals": 
-        "Learn essential SQL commands for analysts, engineers, and scientists. Link - [https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/](https://srussett28-streamlit-series-streamlittest4-itgznn.streamlit.app/)",
+        "Learn essential SQL commands for analysts, engineers, and scientists. Link - [https://srussett28-streamlit-series-sqlcmd-hub5jc.streamlit.app/](https://srussett28-streamlit-series-sqlcmd-hub5jc.streamlit.app/)",
     "4. Pertinent Python Libraries": 
         "Explore must-know Python libraries tailored to different data roles. Link - [https://srussett28-streamli-python-libraries-pt3pythonlibraries1-ysi6yx.streamlit.app/](https://srussett28-streamli-python-libraries-pt3pythonlibraries1-ysi6yx.streamlit.app/)",
     "5. Data Pipelines and Workflow Automate": 

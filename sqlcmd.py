@@ -722,7 +722,7 @@ WHERE order_id = 101;
         st.code("""
 DELETE FROM orders
 WHERE status = 'Canceled';
-""", language="sql")# Add your code for this section here
+""", language="sql")
 
     elif selected_section == "Indexing":
         st.header("Indexing")
@@ -798,7 +798,7 @@ ON products (description);
         st.code("""
 CREATE INDEX idx_city_age
 ON customers (city, age);
-""", language="sql")# Add your code for this section here
+""", language="sql")
 
     elif selected_section == "Transactions":
         st.header("Transactions")
@@ -893,7 +893,7 @@ SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
 BEGIN TRANSACTION;
 -- Operations
 COMMIT;
-""", language="sql")# Add your code for this section here
+""", language="sql")
 
     elif selected_section == "Views":
         st.header("Views")
@@ -1062,7 +1062,7 @@ BEGIN
     SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Order amount must be positive.';
   END IF;
 END;
-""", language="sql")# Add your code for this section here
+""", language="sql")
 
     elif selected_section == "CTE (Common Table Expressions)":
         st.header("CTE (Common Table Expressions)")
@@ -1135,7 +1135,7 @@ WITH TempOrderSummary AS (
 SELECT product_id, total_sold
 FROM TempOrderSummary
 WHERE total_sold > 100;
-""", language="sql")# Add your code for this section here
+""", language="sql")
 
     elif selected_section == "Window Functions":
         st.header("Window Functions")

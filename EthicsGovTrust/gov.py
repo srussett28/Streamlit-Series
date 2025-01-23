@@ -1,5 +1,8 @@
 import streamlit as st
 import os
+st.write(f"Current working directory: {os.getcwd()}")
+st.image(os.path.abspath("titleddu.png"), use_container_width=True)
+
 
 # Sidebar navigation
 st.sidebar.title("Navigation")

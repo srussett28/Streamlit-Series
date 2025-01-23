@@ -468,37 +468,225 @@ elif selected_section == "Ethics":
   Ethical design thinking integrates ethics into every stage of product and system development. This approach encourages teams to consider the societal impact of their solutions, focusing on inclusivity, fairness, and user well-being. By incorporating diverse perspectives during the ideation and testing phases, ethical design reduces biases and unintended harm. It emphasizes iterative feedback loops, allowing designers to refine solutions to better meet ethical standards. Ethical design thinking is not just about compliance but about fostering innovation that benefits all stakeholders.
 """)
 
-    # Bias and Fairness
     st.subheader("Bias and Fairness in Data")
-    st.markdown("""
-    - Types of Bias: Sampling, Algorithmic, Reporting.
-    - Mitigating Bias: Diverse datasets, data audits.
-    - Case Studies: Real-world examples (e.g., AI hiring tools).
-    """)
 
-    # Privacy and Consent
+# Types of Bias
+    st.markdown("""
+### Types of Bias and Their Effects on Data Outputs
+
+1. **Sampling Bias**  
+   - **What it is**: Occurs when the data collected does not represent the target population or domain.  
+   - **Effects**: Leads to models that perform poorly on underrepresented groups, reinforcing systemic inequalities. For example, if a facial recognition dataset contains predominantly light-skinned faces, the model may fail on darker-skinned faces.
+
+2. **Algorithmic Bias**  
+   - **What it is**: Introduced when the algorithms amplify existing biases in the data or create new ones due to flawed assumptions.  
+   - **Effects**: Results in unfair decisions, such as higher loan rejections for certain demographics, even if the data did not explicitly include race.
+
+3. **Reporting Bias**  
+   - **What it is**: Happens when the data reflects how people report or record information, rather than objective reality.  
+   - **Effects**: Skewed conclusions can arise, such as assuming the most popular products in user reviews are the most effective, ignoring biases in who writes reviews.
+
+4. **Observer Bias**  
+   - **What it is**: The data collector's perceptions influence the data being recorded.  
+   - **Effects**: Leads to subjectivity in datasets, impacting the reliability of predictive models in sensitive areas like healthcare diagnostics.
+
+5. **Historical Bias**  
+   - **What it is**: Embedded inequities in historical data are carried forward.  
+   - **Effects**: Algorithms trained on this data can perpetuate discrimination, such as using crime data for predictive policing that disproportionately targets minority communities.
+""")
+
+# Mitigating Bias
+    st.markdown("""
+### Mitigating Bias
+
+1. **Data Diversity**  
+   - Ensure datasets are representative of the populations or scenarios where the model will be deployed. Collect data from varied sources to cover different perspectives.
+
+2. **Regular Data Audits**  
+   - Conduct audits to identify potential biases in the dataset or model outputs. Tools like Fairlearn or IBM AI Fairness 360 can help detect and measure bias.
+
+3. **Algorithm Testing**  
+   - Test models with diverse validation datasets to observe performance across demographic groups.
+
+4. **Transparent Documentation**  
+   - Maintain detailed records of data provenance, curation processes, and decisions made during model development.
+
+5. **Inclusive Development Teams**  
+   - Foster diverse teams to bring multiple perspectives during dataset curation, feature selection, and model evaluation.
+
+6. **Fairness Constraints**  
+   - Apply fairness constraints to algorithms, ensuring that outcomes meet equity standards across groups.
+""")
+
+
+    st.markdown("""
+### Case Studies
+
+#### Successfully Mitigating Bias
+- **Google's Inclusive ML Training**  
+  Google implemented an inclusive machine learning toolkit that emphasizes dataset diversity and fairness-aware metrics during development. This helped reduce algorithmic bias in their image recognition software, which previously misclassified certain objects due to underrepresentation.  
+  [Read more](https://ai.google/principles/)
+
+- **Microsoft's AI Fairness Initiative**  
+  Microsoft employed bias detection and fairness tools to ensure their AI systems, such as recruitment platforms, were free from gender and racial bias. They utilized fairness constraints to improve outcomes for all groups during testing.  
+  [Read more](https://www.microsoft.com/en-us/ai/responsible-ai)
+
+#### Bias Influencing Outcomes Dramatically
+- **AI Hiring Tools and Gender Bias**  
+  Amazon developed an AI hiring tool that showed a preference for male candidates due to historical hiring data favoring men. The tool penalized resumes containing terms like "women's chess club," perpetuating gender discrimination. The system was eventually scrapped.  
+  [Read more](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G)
+
+- **COMPAS Algorithm in Criminal Justice**  
+  The COMPAS recidivism prediction algorithm was found to disproportionately classify African American defendants as high risk for reoffending, despite similar crime rates as other groups. This bias led to harsher sentencing and unequal treatment in the justice system.  
+  [Read more](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing)
+""")
+
+   
     st.subheader("Privacy and Consent")
-    st.markdown("""
-    - Importance of Consent: Informed consent for data collection.
-    - Privacy Technologies: Differential privacy, federated learning.
-    - Managing Sensitive Data: Identifying PII, secure handling.
-    """)
 
-    # Ethical Decision-Making
+# Importance of Consent
+    st.markdown("""
+### Importance of Consent
+
+1. **Informed Consent**  
+   - Ensures individuals are fully aware of what data is being collected, why, and how it will be used.  
+   - Builds trust and fosters transparency between organizations and users.  
+
+2. **Explicit vs. Implicit Consent**  
+   - Explicit consent involves a clear, affirmative action (e.g., signing a form or clicking "I Agree").  
+   - Implicit consent is assumed through the user’s actions (e.g., continuing to use a service), but it may lead to misunderstandings and ethical concerns.
+
+3. **Challenges**  
+   - Consent forms are often lengthy and full of legal jargon, leading to uninformed agreements.  
+   - In global applications, laws like GDPR (EU) and CCPA (California) must be adhered to, making consent management complex.
+""")
+
+
+    st.markdown("""
+### Privacy Technologies
+
+1. **Differential Privacy**  
+   - Adds statistical noise to datasets, ensuring individual data points cannot be identified while maintaining overall data utility.  
+   - Widely used by companies like Apple and Google for analytics without compromising user privacy.
+
+2. **Federated Learning**  
+   - Enables model training across decentralized devices while keeping data local.  
+   - Useful in sensitive areas like healthcare, where data cannot leave individual institutions.
+
+3. **Data Masking and Encryption**  
+   - **Masking**: Protects sensitive data by substituting original values with fictitious data.  
+   - **Encryption**: Ensures data is stored and transmitted securely, minimizing risks of unauthorized access.
+""")
+
+
+    st.markdown("""
+### Managing Sensitive Data
+
+1. **Identifying Personally Identifiable Information (PII)**  
+   - Examples: Names, social security numbers, IP addresses, biometric data.  
+   - Systems must be designed to identify and flag sensitive data automatically.
+
+2. **Secure Handling**  
+   - Use access control mechanisms to limit data access to authorized personnel.  
+   - Regularly audit systems for compliance with privacy standards.
+
+3. **Data Minimization**  
+   - Only collect and store the data necessary for achieving a specific purpose.  
+   - Reduces exposure to privacy risks.
+""")
+
+
     st.subheader("Ethical Decision-Making in Data Use")
-    st.markdown("""
-    - Ethical Dilemmas: Balancing business goals and ethics.
-    - Decision-Making Frameworks: Identify, Evaluate, Decide, Implement, Review.
-    - Risk Assessment: Harm vs. benefit evaluation.
-    """)
 
-    # Accountability
-    st.subheader("Accountability in Data Ethics")
+
     st.markdown("""
-    - Role of Ethics Committees.
-    - Establishing a Code of Ethics.
-    - Monitoring and Reporting: Regular audits, incident reports.
-    """)
+### Ethical Dilemmas
+
+1. **Balancing Business Goals and Ethics**  
+   - Example: Should a company monetize user data at the expense of user privacy?  
+   - Requires weighing short-term profits against long-term reputational risks.
+
+2. **Conflicts of Interest**  
+   - Decision-makers may face pressure to prioritize profitability over ethical considerations.  
+   - Transparent governance processes can mitigate these conflicts.
+
+3. **Emerging Technologies**  
+   - AI and ML pose new ethical challenges, such as whether to use facial recognition in public spaces.
+""")
+
+
+    st.markdown("""
+### Decision-Making Frameworks
+
+1. **Steps in Ethical Decision-Making**  
+   - **Identify**: Recognize the ethical issue.  
+   - **Evaluate**: Analyze the potential outcomes and stakeholders involved.  
+   - **Decide**: Make a choice based on the analysis.  
+   - **Implement**: Act on the decision while adhering to ethical standards.  
+   - **Review**: Assess the decision’s impact and refine future practices.
+
+2. **Tools and Guidelines**  
+   - Use tools like IEEE’s Ethics Certification Program to guide decisions.  
+   - Follow established ethical principles such as beneficence, justice, and respect for autonomy.
+""")
+
+
+    st.markdown("""
+### Risk Assessment
+
+1. **Harm vs. Benefit Evaluation**  
+   - Assess the potential harm to individuals or groups compared to the anticipated benefits.  
+   - Example: Predictive policing may reduce crime rates but disproportionately impact marginalized communities.
+
+2. **Proactive Risk Mitigation**  
+   - Employ bias detection tools during model development.  
+   - Engage diverse stakeholders to identify potential risks early.
+""")
+
+
+    st.subheader("Accountability in Data Ethics")
+
+
+    st.markdown("""
+### Role of Ethics Committees
+
+1. **Oversight and Guidance**  
+   - Ethics committees review data practices to ensure alignment with ethical principles.  
+   - Provide recommendations to address ethical challenges.
+
+2. **Multidisciplinary Approach**  
+   - Committees should include legal experts, ethicists, data scientists, and representatives from affected groups.  
+   - Diverse perspectives reduce blind spots and improve decision-making.
+""")
+
+
+    st.markdown("""
+### Establishing a Code of Ethics
+
+1. **Clear and Actionable Guidelines**  
+   - Outline principles such as fairness, transparency, and accountability.  
+   - Provide specific examples to help employees apply ethical principles in real-world scenarios.
+
+2. **Training and Awareness**  
+   - Regularly train staff on ethical guidelines and industry regulations.  
+   - Encourage open discussions about ethical dilemmas.
+""")
+
+
+    st.markdown("""
+### Monitoring and Reporting
+
+1. **Regular Audits**  
+   - Conduct audits to assess compliance with ethical standards.  
+   - Use audit findings to refine policies and practices.
+
+2. **Incident Reporting Mechanisms**  
+   - Create channels for employees and stakeholders to report unethical practices confidentially.  
+   - Example: Whistleblower policies with protections against retaliation.
+
+3. **Accountability Metrics**  
+   - Develop KPIs for ethical compliance, such as the number of resolved incidents or the results of fairness evaluations in algorithms.
+""")
 
     # Technology and Tools
     st.subheader("Technology and Tools for Ethical Practices")

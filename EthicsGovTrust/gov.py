@@ -1,8 +1,5 @@
 import streamlit as st
 import os
-st.write(f"Current working directory: {os.getcwd()}")
-st.image(os.path.abspath("titleddu.png"), use_container_width=True)
-
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
@@ -18,7 +15,7 @@ selected_section = st.sidebar.radio("Go to:", sections)
 
 if selected_section == "Title Page":
     st.title("Data Governance & Collaboration Hub")
-    image_path_title = "EthicsGovTrust/titleddu.png"
+    image_path_title = "EthicsGovTrust/titledu.png"
     st.image( image_path_title, use_container_width=True)
 
 
@@ -85,7 +82,7 @@ These roles are interconnected, and this app provides a comprehensive understand
 
 elif selected_section == "Data Governance":
     st.header("Data Governance")
-    image_path_gov = "govdu.png"  
+    image_path_gov = "EthicsGovTrust/govdu.png"  
     st.image(image_path_gov, use_container_width=True)
     st.subheader("What is Data Governance?")
     st.markdown("""
@@ -116,7 +113,7 @@ elif selected_section == "Data Governance":
     
     # Framework
     st.subheader("Data Governance Framework")
-    image_path_frame = "framedu.png"  
+    image_path_frame = "EthicsGovTrust/framedu.png"  
     st.image(image_path_frame, use_container_width=True)
     st.markdown("""
     - Definition and Importance
@@ -202,7 +199,7 @@ elif selected_section == "Data Governance":
 
     
     st.subheader("Data Lifecycle Management")
-    image_path_cycle = "lcdu.png"  
+    image_path_cycle = "EthicsGovTrust/lcdu.png"  
     st.image(image_path_cycle, use_container_width=True)
     st.markdown("""
 - **Data Creation and Capture**: 
@@ -273,7 +270,7 @@ elif selected_section == "Data Governance":
 
     
     st.subheader("Data Quality Management")
-    image_path_clean = "cleandu.png"  
+    image_path_clean = "EthicsGovTrust/cleandu.png"  
     st.image(image_path_clean, use_container_width=True)
     st.markdown("""
 - **Dimensions of Data Quality**: 
@@ -321,7 +318,7 @@ elif selected_section == "Data Governance":
 """)
 
     st.subheader("Metrics and KPIs")
-    image_path_kpi = "kpidu.png"  
+    image_path_kpi = "EthicsGovTrust/kpidu.png"  
     st.image(image_path_kpi, use_container_width=True)
     st.markdown("""
 - **Common Metrics**: 
@@ -435,7 +432,7 @@ elif selected_section == "Data Governance":
 
 elif selected_section == "Ethics":
     st.header("Data Ethics")
-    image_path_ethics = "ethicsdu.png"  
+    image_path_ethics = "EthicsGovTrust/ethicsdu.png"  
     st.image(image_path_ethics, use_container_width=True)
     st.subheader("Understanding Data Ethics")
     st.markdown("""
@@ -470,7 +467,7 @@ elif selected_section == "Ethics":
 """)
 
     st.subheader("Bias and Fairness in Data")
-    image_path_bias = "biasdu.png"  
+    image_path_bias = "EthicsGovTrust/biasdu.png"  
     st.image(image_path_bias, use_container_width=True)
     st.markdown("""
 ### Types of Bias and Their Effects on Data Outputs
@@ -563,7 +560,7 @@ elif selected_section == "Ethics":
 
    
     st.subheader("Privacy and Consent")
-    image_path_privacy = "privacydu.png"  
+    image_path_privacy = "EthicsGovTrust/privacydu.png"  
     st.image(image_path_privacy, use_container_width=True)
     st.markdown("""
 ### Importance of Consent
@@ -615,7 +612,7 @@ elif selected_section == "Ethics":
 
 
     st.subheader("Ethical Decision-Making in Data Use")
-    image_path_dm = "dmdu.png"  
+    image_path_dm = "EthicsGovTrust/dmdu.png"  
     st.image(image_path_dm, use_container_width=True)
     st.markdown("""
 ### Ethical Dilemmas
@@ -661,7 +658,7 @@ elif selected_section == "Ethics":
 
 
     st.subheader("Accountability in Data Ethics")
-    image_path_committee = "committeedu.png"  
+    image_path_committee = "EthicsGovTrust/committeedu.png"  
     st.image(image_path_committee, use_container_width=True)
     st.markdown("""
 ### Role of Ethics Committees
@@ -686,7 +683,7 @@ elif selected_section == "Ethics":
    - Encourage open discussions about ethical dilemmas.
 """)
 
-    image_path_report = "reportdu.png"  
+    image_path_report = "EthicsGovTrust/reportdu.png"  
     st.image(image_path_report, use_container_width=True)
     
     st.markdown("""
@@ -706,7 +703,7 @@ elif selected_section == "Ethics":
  
 
     st.subheader("Technology and Tools for Ethical Practices")
-    image_path_ed = "eddu.png"  
+    image_path_ed = "EthicsGovTrust/eddu.png"  
     st.image(image_path_ed, use_container_width=True)
     st.markdown("""
 - **Bias Detection Tools**: Tools like IBM AI Fairness 360 and Google What-If Tool play a crucial role in identifying, visualizing, and addressing biases within datasets and AI models. These tools empower organizations to improve fairness and inclusivity across diverse demographic groups.
@@ -817,7 +814,7 @@ elif selected_section == "Ethics":
 
 
 elif selected_section == "Data Security":
-    image_path_ds = "dsdu.png"  
+    image_path_ds = "EthicsGovTrust/dsdu.png"  
     st.image(image_path_ds, use_container_width=True)    
     st.header("Data Security")
     st.subheader("Why Data Security Matters")
@@ -852,7 +849,7 @@ elif selected_section == "Data Security":
 
 # Data Encryption
     st.subheader("Data Encryption")
-    image_path_encrypt = "encrdu.png"  
+    image_path_encrypt = "EthicsGovTrust/encrdu.png"  
     st.image(image_path_ds, use_container_width=True)   
     st.markdown("""
 - **Symmetric vs. Asymmetric Encryption:** Symmetric encryption uses a single key for encryption and decryption, while asymmetric encryption involves a public-private key pair. Both are vital for securing data in different contexts.
@@ -872,7 +869,7 @@ elif selected_section == "Data Security":
 
 
     st.subheader("Data Breaches")
-    image_path_breach = "breachdu.png"  
+    image_path_breach = "EthicsGovTrust/breachdu.png"  
     st.image(image_path_breach, use_container_width=True)   
     st.markdown("""
 - **Common Causes:** Phishing attacks, weak passwords, and insider threats are common reasons for breaches. These vulnerabilities are often exploited by attackers to gain unauthorized access.
@@ -892,7 +889,7 @@ elif selected_section == "Data Security":
 
 
     st.subheader("Backup and Disaster Recovery")
-    image_path_backup = "backupdu.png"  
+    image_path_backup = "EthicsGovTrust/backupdu.png"  
     st.image(image_path_backup, use_container_width=True)   
     st.markdown("""
 - **Backup Strategies:** Full, incremental, and differential backups ensure data can be restored in case of loss. Choosing the right strategy depends on system requirements and recovery objectives.
@@ -921,7 +918,7 @@ elif selected_section == "Data Security":
 
 
     st.subheader("Metrics and KPIs for Data Security")
-    image_path_metric = "metricdu.png"
+    image_path_metric = "EthicsGovTrust/metricdu.png"
     st.image(image_path_metric, use_container_width=True)
     st.markdown("""
 - **Key Metrics:** Effective security metrics include the number of detected incidents, mean time to detect (MTTD), and mean time to respond (MTTR), which reflect how quickly threats are identified and mitigated. Other key metrics include the percentage of systems with critical patches applied and the frequency of vulnerability scans completed.
@@ -950,7 +947,7 @@ elif selected_section == "Data Security":
     tab1, tab2, tab3 = st.tabs(["Gold Standard", "What Not to Do", "Proactive and Effective"])
 
     with tab1:
-     st.markdown("### ** Microsoft’s Internal Security Practices**")
+     st.markdown("### Microsoft’s Internal Security Practices")
      st.write("""
     **Scenario:**  
     Microsoft’s internal security practices demonstrate a robust approach to protecting their cloud and enterprise services. 
@@ -968,7 +965,7 @@ elif selected_section == "Data Security":
 
 
     with tab2:
-     st.markdown("### ** The Equifax Data Breach**")
+     st.markdown("### The Equifax Data Breach")
      st.write("""
     **Scenario:**  
     In 2017, Equifax suffered a massive data breach when attackers exploited an unpatched Apache Struts vulnerability. 
@@ -1004,7 +1001,7 @@ elif selected_section == "Data Security":
 
 elif selected_section == "Collaboration & Communication":
     st.header("Collaboration & Communication")
-    image_path_comm = "commdu.png"
+    image_path_comm = "EthicsGovTrust/commdu.png"
     st.image(image_path_comm, use_container_width=True)
     st.subheader("Key Principles of Collaboration and Communication")
     st.markdown("""
@@ -1032,7 +1029,7 @@ elif selected_section == "Collaboration & Communication":
 
 
     st.subheader("Data Sharing and Governance in Collaboration")
-    image_path_share = "sharedu.png"
+    image_path_share = "EthicsGovTrust/sharedu.png"
     st.image(image_path_share, use_container_width=True)    
     st.markdown("""
 - **Role-Based Access Controls:** Assign specific access permissions based on team roles to ensure secure and appropriate data sharing. This approach limits unauthorized access, reducing the risk of data breaches while maintaining collaboration efficiency. Role-based controls also streamline workflows by ensuring that individuals can access only the data they need for their tasks.
@@ -1072,7 +1069,7 @@ elif selected_section == "Collaboration & Communication":
 """)
 
     st.subheader("Overcoming Barriers to Collaboration")
-    image_path_barrier = "barrierdu.png"
+    image_path_barrier = "EthicsGovTrust/barrierdu.png"
     st.image(image_path_barrier, use_container_width=True)     
     st.markdown("""
 - **Time Zone Differences:** Use asynchronous communication tools like Slack, Notion, or recorded meetings to ensure smooth collaboration across time zones. These tools allow team members to contribute at their own pace without delaying progress. Time zone challenges can also be addressed by overlapping working hours where possible to facilitate live discussions when necessary.
@@ -1143,7 +1140,7 @@ elif selected_section == "Collaboration & Communication":
 
 
     with tab2:
-     st.markdown("### ** Boeing 787 Dreamliner Project**")
+     st.markdown("### **Boeing 787 Dreamliner Project**")
      st.write("""
     **Scenario:**  
     The Boeing 787 Dreamliner project serves as a cautionary tale about the complexities of global collaboration. 

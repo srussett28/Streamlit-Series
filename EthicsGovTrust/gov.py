@@ -15,7 +15,7 @@ selected_section = st.sidebar.radio("Go to:", sections)
 
 if selected_section == "Title Page":
     st.title("Data Governance & Collaboration Hub")
-    image_path_title = "titledu.png"
+    image_path_title = "EthicsGovTrust/titleddu.png"
     st.image( image_path_title, use_container_width=True)
 
 

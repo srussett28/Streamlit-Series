@@ -43,7 +43,7 @@ toc = {
     "1. The Basics: Tools, prior knowledge, key terminology etc.": 
         "Introductory materials to get started. Link - [https://srussett28-streamlit-series-prereq2-nyxkg6.streamlit.app/](https://srussett28-streamlit-series-prereq2-nyxkg6.streamlit.app/)",
     "2. Ethics, Governance, and Trust in Data.": 
-        "Understand the importance of responsible and ethical data use. Link - Under Construction",
+        "Understand the importance of responsible and ethical data use. Link - [https://ethicsgovtrust-6wcarnuld9puk9pijewqul.streamlit.app/] (https://ethicsgovtrust-6wcarnuld9puk9pijewqul.streamlit.app/)",
     "3. Everybody's favorite STATISTICCCCSSSSS": 
         "Understand the fundamentals of statistics for data analysis. Link - Under Construction",
     "4. SQL Commands for Data Professionals": 

@@ -814,9 +814,9 @@ elif selected_section == "Ethics":
 
 
 elif selected_section == "Data Security":
+    st.header("Data Security")
     image_path_ds = "EthicsGovTrust/dsdu.png"  
     st.image(image_path_ds, use_container_width=True)    
-    st.header("Data Security")
     st.subheader("Why Data Security Matters")
     st.markdown("""
     Data security protects organizational and personal data from unauthorized access, breaches, or theft.

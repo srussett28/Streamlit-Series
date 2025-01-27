@@ -16,9 +16,8 @@ def main():
 
     # Main Content
     st.title(f"{selected_role}: Statistics and Math")
-
- # Main Content
-    st.title(f"{selected_role}: Statistics and Math")
+    image_path_ed = "StatsMath/mathdu.png"  
+    st.image(image_path_ed, use_container_width=True)
 
     tabs = st.tabs(["Descriptive", "Prescriptive", "Predictive", "Diagnostic", "Other"])
 

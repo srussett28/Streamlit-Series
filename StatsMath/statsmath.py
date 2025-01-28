@@ -16,7 +16,7 @@ def main():
 
     # Main Content
     st.title(f"{selected_role}: Statistics and Math")
-    image_path_ed = "StatsMath/mathdu.png"  
+    image_path_ed = "StatsMath/mathdugit .png"  
     st.image(image_path_ed, use_container_width=True)
 
     tabs = st.tabs(["Descriptive", "Prescriptive", "Predictive", "Diagnostic", "Other"])
@@ -24,6 +24,8 @@ def main():
     if selected_role == "Data Analyst":
         with tabs[0]:
             st.header("Descriptive Statistics for Data Analysts")
+            image_path_an = "StatsMath/analystdu .png"  
+            st.image(image_path_an, use_container_width=True)
             st.markdown("- Mean, Median, Mode, Range, Variance, Standard Deviation")
             st.markdown("- IQR: Quartile, Percentile, Box Plot")
             st.markdown("- Correlation and Covariance")

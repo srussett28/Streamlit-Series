@@ -76,7 +76,7 @@ def main():
             st.write("- Variance and Standard Deviation are commonly used for quantitative datasets.")
             st.write("- Standard Deviation is preferred in inferential statistics and hypothesis testing.")
 
-            ---
+        
 
             # IQR: Quartile, Percentile, Box Plot
             st.markdown("## IQR, Quartiles, Percentiles, and Box Plots")
@@ -104,8 +104,6 @@ def main():
             st.write("- Box Plots are especially useful for comparing multiple datasets side by side.")
             st.write("- IQR is robust against skewed data, unlike variance or standard deviation.")
 
-            ---
-
             # Correlation and Covariance
             st.markdown("## Correlation and Covariance")
             st.markdown("**Concept:**")
@@ -130,8 +128,84 @@ def main():
         
         with tabs[1]:
             st.header("Prescriptive Statistics for Data Analysts")
-            st.markdown("- A/B Testing")
-            st.markdown("- Sampling Techniques: Probability and Non-Probability Sampling")
+            st.markdown("**Concept**")
+            st.write(
+    "A/B Testing is a randomized controlled experiment used to compare two versions (A and B) of a variable "
+    "to determine which performs better. It is commonly used in marketing, UX design, and product optimization."
+)
+
+            st.markdown("**Calculations**")
+            st.write(
+    "- **Conversion Rate** = (Conversions / Total Visitors) * 100"
+    "\n- **Lift** = (Conversion Rate of B - Conversion Rate of A) / Conversion Rate of A"
+    "\n- **Statistical Significance**: Uses p-values and confidence intervals to determine if the observed "
+    "difference is not due to random chance."
+)
+
+            st.markdown("**When to Use**")
+            st.write(
+    "- When testing changes to websites, ads, or products before full rollout."
+    "\n- When optimizing conversion rates or engagement."
+    "\n- When a controlled experiment is possible."
+)
+
+            st.markdown("**When Not to Use**")
+            st.write(
+    "- When sample sizes are too small to achieve statistical power."
+    "\n- When external factors (e.g., seasonality, market shifts) could skew results."
+    "\n- When testing multiple variables at once (consider multivariate testing instead)."
+)
+
+            st.markdown("**Additional Info**")
+            st.write(
+    "- Common statistical tests: **Chi-Square Test**, **T-Test**, **Z-Test**."
+    "\n- Requires **random assignment** of users into groups to reduce bias."
+    "\n- The **False Discovery Rate (FDR)** should be controlled to avoid misleading conclusions."
+)
+
+# Sampling Techniques Section
+            st.header("🎲 Sampling Techniques: Probability and Non-Probability Sampling")
+
+            st.markdown("**Concept**")
+            st.write(
+    "Sampling is the process of selecting a subset of data from a larger population to make inferences about the whole."
+    "\n- **Probability Sampling**: Every member of the population has a known, nonzero chance of being selected."
+    "\n- **Non-Probability Sampling**: Selection is based on convenience or judgment rather than randomization."
+)
+
+            st.markdown("**Calculations**")
+            st.write(
+    "- **Sample Mean (𝑥̄)** = Σxᵢ / n"
+    "\n- **Sample Standard Deviation (s)** = sqrt(Σ(xᵢ - 𝑥̄)² / (n-1))"
+    "\n- **Margin of Error** = Z * (σ / sqrt(n))"
+)
+
+            st.markdown("**When to Use**")
+            st.write(
+    "**Probability Sampling** (e.g., Simple Random, Stratified, Cluster, Systematic)"
+    "\n- When unbiased representation is required."
+    "\n- When statistical inference is needed."
+    "\n\n**Non-Probability Sampling** (e.g., Convenience, Judgmental, Snowball, Quota)"
+    "\n- When random selection is impractical or expensive."
+    "\n- When exploratory research is conducted."
+)
+
+            st.markdown("**When Not to Use**")
+            st.write(
+    "**Probability Sampling**"
+    "\n- When cost or time constraints make it infeasible."
+    "\n- When the population list is unavailable."
+    "\n\n**Non-Probability Sampling**"
+    "\n- When results need to be generalizable to the whole population."
+    "\n- When avoiding bias is critical."
+)
+
+            st.markdown("**Additional Info**")
+            st.write(
+    "- **Law of Large Numbers**: Larger samples tend to produce more accurate estimates."
+    "\n- **Central Limit Theorem (CLT)**: The distribution of sample means approaches normality as the sample size increases."
+    "\n- Sample size should be calculated using **power analysis** for sufficient reliability."
+)
         with tabs[2]:
             st.header("Predictive Statistics for Data Analysts")
             st.markdown("- Empirical and Theoretical Probability")

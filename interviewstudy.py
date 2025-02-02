@@ -116,32 +116,22 @@ questions = [
     ("Identify customers who have not placed an order in the last year.", "SELECT c.* FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id AND o.order_date >= DATE_SUB(NOW(), INTERVAL 1 YEAR) WHERE o.order_id IS NULL;")
 ]
 
-questions = [
-    ("How would a colleague, classmate or supervisor describe you?", "Problem Solver: ..."),
-    ("What motivates you to do your best on the job?", "My motivation has been the same since 2011..."),
-    ("The next morning you say to yourself, ‘I really don’t want to work today because…’? Why?", "Having served in the Army for more than half a decade..."),
-    # Add the remaining questions here...
-]
-
-# Shuffle questions at the start of the session
-if 'shuffled_questions' not in st.session_state:
-    st.session_state.shuffled_questions = random.sample(questions, len(questions))
+# Initialize session state for question index
+if 'current_index' not in st.session_state:
     st.session_state.current_index = 0
     st.session_state.show_answer = False
 
 def next_question():
-    """Move to the next question in the shuffled list."""
-    st.session_state.current_index = (st.session_state.current_index + 1) % len(st.session_state.shuffled_questions)
+    st.session_state.current_index = (st.session_state.current_index + 1) % len(questions)
     st.session_state.show_answer = False
 
 def flip_card():
-    """Flip the flashcard to show or hide the answer."""
     st.session_state.show_answer = not st.session_state.show_answer
 
 st.title("Sloan's Flashcard Practice App")
 st.image("resy.png", caption="ITS YOUR TIME TO PASS!", use_container_width=True)
-
-question, answer = st.session_state.shuffled_questions[st.session_state.current_index]
+# Get current question and answer
+question, answer = questions[st.session_state.current_index]
 
 st.subheader("Question:")
 st.write(question)

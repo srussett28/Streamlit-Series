@@ -358,34 +358,117 @@ def main():
 
 
     elif selected_role == "Data Scientist":
-        with tabs[0]:
-            st.header("Descriptive Statistics for Data Scientists")
-            st.markdown("- Descriptive Measures of Central Tendency and Spread")
-            st.markdown("- Visualizations: Histograms, QQ Plots")
-        with tabs[1]:
-            st.header("Prescriptive Statistics for Data Scientists")
-            st.markdown("- Hypothesis Testing: P-Values, Confidence Intervals, Tailed Tests")
-            st.markdown("- Statistical Power and Significance Testing")
-        with tabs[2]:
-            st.header("Predictive Statistics for Data Scientists")
-            st.markdown("- Probability and Statistical Distributions:")
-            st.markdown("  - Normal, Binomial, Poisson, Exponential, Geometric Distributions")
-            st.markdown("  - Central Limit Theorem")
-        with tabs[3]:
-            st.header("Diagnostic Statistics for Data Scientists")
-            st.markdown("- Bayesian Analysis")
-            st.markdown("- Conditional Probability, Law of Total Probability")
-        with tabs[4]:
-            st.header("Other Topics for Data Scientists")
-            st.markdown("- Feature Engineering:")
-            st.markdown("  - Box-Cox Transformation")
-            st.markdown("  - Z-Score and Scaling")
-            st.markdown("- Model Validation:")
-            st.markdown("  - Statistical Power and Influencing Factors")
-            st.markdown("  - Confidence and Prediction Intervals")
-            st.markdown("  - A/B Testing and Optimization Techniques")
-            st.markdown("- Automation and Deployment:")
-            st.markdown("  - Leveraging Statistical Insights for Model Improvements")
+    st.header("Descriptive Statistics for Data Scientists")
+    
+    with tabs[0]:  # Descriptive Statistics
+      
+    
+    st.subheader("Descriptive Measures of Central Tendency and Spread")
+    st.markdown("**Concept:** Measures of central tendency (Mean, Median, Mode) describe the center of a dataset, while measures of spread (Range, Variance, Standard Deviation, IQR) show data variability.")
+    
+    st.markdown("**Calculations:**")
+    st.latex(r"\text{Mean} = \frac{\sum x_i}{n}")
+    st.latex(r"\text{Variance} = \frac{\sum (x_i - \mu)^2}{n}")
+    st.latex(r"\text{Standard Deviation} = \sqrt{\text{Variance}}")
+    
+    st.markdown("**When to Use:**")
+    st.write("- Use the mean for normally distributed data.")
+    st.write("- Use the median when dealing with skewed distributions.")
+    
+    st.markdown("**When Not to Use:**")
+    st.write("- Avoid the mean if there are extreme outliers.")
+    
+    st.subheader("Visualizations: Histograms, QQ Plots")
+    st.markdown("**Concept:**")
+    st.write("- Histograms display frequency distributions.")
+    st.write("- QQ plots compare the data’s distribution to a theoretical normal distribution.")
+    
+    st.markdown("**When to Use:**")
+    st.write("- Histograms are used for identifying data distributions.")
+    st.write("- QQ plots check for normality assumptions in statistical tests.")
+    
+    with tabs[1]:  # Prescriptive Statistics
+     st.header("Prescriptive Statistics for Data Scientists")
+    
+    st.subheader("Hypothesis Testing: P-Values, Confidence Intervals, Tailed Tests")
+    st.markdown("**Concept:** Hypothesis testing determines if a dataset supports a given claim using statistical tests.")
+    
+    st.markdown("**Calculations:**")
+    st.latex(r"Z = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}}")
+    st.latex(r"\text{Confidence Interval} = \bar{x} \pm Z_{\alpha/2} \times \frac{\sigma}{\sqrt{n}}")
+    
+    st.markdown("**When to Use:**")
+    st.write("- Use hypothesis testing to validate assumptions in A/B testing and experiments.")
+    
+    st.markdown("**When Not to Use:**")
+    st.write("- Avoid if sample size is too small for meaningful results.")
+    
+    st.subheader("Statistical Power and Significance Testing")
+    st.markdown("**Concept:** Statistical power is the probability of detecting an effect if it exists.")
+    
+    st.markdown("**Calculations:**")
+    st.latex(r"\text{Power} = 1 - \beta")
+    
+    st.markdown("**When to Use:**")
+    st.write("- When designing experiments to ensure meaningful results.")
+    
+    with tabs[2]:  # Predictive Statistics
+     st.header("Predictive Statistics for Data Scientists")
+    
+    st.subheader("Probability and Statistical Distributions")
+    st.markdown("**Concept:** Probability distributions describe how data points are expected to behave.")
+    
+    st.markdown("**Key Distributions:**")
+    st.latex(r"P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \quad \text{(Binomial)}")
+    st.latex(r"P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} \quad \text{(Poisson)}")
+    
+    st.markdown("**When to Use:**")
+    st.write("- Binomial is used for binary outcomes (success/failure).")
+    st.write("- Poisson is used for rare events over time.")
+    
+    st.subheader("Central Limit Theorem")
+    st.markdown("**Concept:** As sample size increases, the sampling distribution of the mean approaches normality.")
+    
+    st.latex(r"\bar{X} \sim \mathcal{N}(\mu, \frac{\sigma^2}{n})")
+    
+    st.markdown("**When to Use:**")
+    st.write("- When working with small samples to justify normality assumptions.")
+    
+    with tabs[3]:  # Diagnostic Statistics
+     st.header("Diagnostic Statistics for Data Scientists")
+    
+    st.subheader("Bayesian Analysis")
+    st.markdown("**Concept:** Bayesian statistics updates prior beliefs based on new evidence.")
+    
+    st.markdown("**Calculations:**")
+    st.latex(r"P(A | B) = \frac{P(B | A) P(A)}{P(B)} \quad \text{(Bayes' Theorem)}")
+    
+    st.markdown("**When to Use:**")
+    st.write("- When incorporating prior knowledge into statistical inference.")
+    
+    st.subheader("Conditional Probability, Law of Total Probability")
+    st.latex(r"P(A | B) = \frac{P(A \cap B)}{P(B)}")
+    st.latex(r"P(B) = \sum_{i} P(B | A_i) P(A_i)")
+    
+    st.markdown("**When to Use:**")
+    st.write("- When working with dependent events.")
+    
+    with tabs[4]:  # Other Topics
+     st.header("Other Topics for Data Scientists")
+    
+    st.subheader("Feature Engineering: Box-Cox Transformation, Z-Score Scaling")
+    st.latex(r"Y_{new} = \frac{Y^\lambda - 1}{\lambda}, \quad \text{for } \lambda \neq 0")
+    st.latex(r"Z = \frac{X - \mu}{\sigma}")
+    
+    st.markdown("**Model Validation:**")
+    st.latex(r"\text{Power} = 1 - \beta")
+    st.markdown("- Ensuring statistical power and avoiding false positives.")
+    
+    st.markdown("**A/B Testing & Optimization:**")
+    st.write("- Experimentation techniques for product and marketing decisions.")
+    
+    st.markdown("**Automation & Deployment:**")
+    st.write("- Using statistics to automate data-driven decisions.")
 
     elif selected_role == "Data Engineer":
         with tabs[0]:
